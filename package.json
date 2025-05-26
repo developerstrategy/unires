@@ -12,6 +12,7 @@
     "build": "npm-run-all build:*",
     "debug": "DEBUG=* npx eleventy",
     "img-exporter": "node ./img-exporter.js"
+    
   },
   "repository": {
     "type": "git",
