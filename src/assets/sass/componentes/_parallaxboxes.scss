@@ -1,3 +1,18 @@
+.interior-content {
+  position: relative;
+  z-index: 10;
+  overflow: auto;
+
+
+  @media (min-width: 768px) {
+    overflow: hidden;
+    height: 500vh;
+
+  }
+
+}
+
+
 .boxshow-inner {
   position: relative;
   display: flex;
@@ -13,8 +28,11 @@
 }
 .boxshow-inner-img {
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 60%;
   flex-direction: column;
+  @media (min-width: 768px) {
+    flex-basis: 30%;
+  }
 }
 .lateral-scroll-title {
   position: absolute;
@@ -68,10 +86,16 @@
   padding: 20px;
 }
 .interior-sticky {
-  width: 100%;
+  width: 3000px;
   overflow: hidden;
-  position: sticky;
+  position: relative;
   top: 200px;
   z-index: 10;
-  /* el resto de estilos que necesites */
+
+  @media (min-width: 768px) {
+    position: sticky;
+    width: 100%;
+
+  }
+
 }

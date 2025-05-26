@@ -57,7 +57,10 @@
 
 <script>
   let lastScrollTop = 0;
-  document.addEventListener('scroll', () => {
+
+  function handleScroll() {
+    if (window.innerWidth <= 768) return;
+
     const horizontalDiv = document.querySelector('.scrolllateral');
     if (!horizontalDiv) return;
     const rect = horizontalDiv.getBoundingClientRect();
@@ -94,5 +97,8 @@
       scrollPercentage >= 0.30 ? '-100vw' : '0';
     horizontalDiv.style.transition = 'transform 0.5s ease-in-out';
     horizontalDiv.style.transform = `translateX(${translateValue})`;
-  });
+  }
+
+  document.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll);
 </script>

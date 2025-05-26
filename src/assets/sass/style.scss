@@ -1422,13 +1422,6 @@ html.lenis body {
 }
 
 
-.interior-content {
-  position: relative;
-  z-index: 10;
-  height: 500vh;
-
-}
-
 
 
 
@@ -1451,26 +1444,37 @@ html.lenis body {
 }
 
 .boxparallax1 {
-  width: 32%;
-  height: 30vh;
+  width: 80%;
+  height: 20vh;
   z-index: 10;
+  @media (min-width: 768px) {
+    width: 32%;
+    height: 30vh;
+  }
 
 
 }
 
 .boxparallax2 {
-  width: 32%;
-  height: 30vh;
+  width: 80%;
+  height: 20vh;
   z-index: 6;
-
+  @media (min-width: 768px) {
+    width: 32%;
+    height: 30vh;
+  }
 }
 
 .boxparallax3 {
-  width: 32%;
-  height: 30vh;
+  width: 80%;
+  height: 20vh;
   z-index: 5;
   align-self: flex-start;
   margin-left: 40%;
+  @media (min-width: 768px) {
+    width: 32%;
+    height: 30vh;
+  }
 }
 
 .rotation-x{

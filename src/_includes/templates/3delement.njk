@@ -46,7 +46,6 @@
       <p class="title-l"> {{ global_index.3delement_5_content }}</p>
   </div>
 </div>
-
   <!-- Aquí se insertará el elemento 3D usando Three.js -->
   <script type="module">
     import * as THREE from 'https://cdn.skypack.dev/three@0.132.2';
@@ -54,27 +53,34 @@
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true }); // Hacer el fondo transparente
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.domElement.style.width = '100%'; // Establecer el ancho del canvas al 100%
-    renderer.domElement.style.height = 'auto'; // Establecer la altura del canvas a auto
+    renderer.domElement.style.width = '100%';
+    renderer.domElement.style.height = 'auto';
     document.getElementById('3delement').appendChild(renderer.domElement);
 
-    // Ajustar la luz ambiental para que la textura no se vea sobreexpuesta
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Luz ambiental con intensidad reducida
+    // Configuración de luces según la referencia proporcionada
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
     scene.add(ambientLight);
 
-    // Añadir luz direccional para iluminar el borde metálico
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // Luz direccional con intensidad reducida
-    directionalLight.position.set(5, 5, 5); // Posicionar la luz en un ángulo de 45 grados
-    scene.add(directionalLight);
+    const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.5);
+    directionalLight1.position.set(10, 100, 0);
+    scene.add(directionalLight1);
+
+    const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight2.position.set(-50, 10, 50);
+    directionalLight2.lookAt(0, 0, 0);
+    scene.add(directionalLight2);
+
+    const pointLight = new THREE.PointLight(0xffffff, 0.01, 100);
+    pointLight.position.set(-10, 5, 0);
+    scene.add(pointLight);
 
     const loader = new GLTFLoader();
     let model;
 
-    // Variables para la rotación inicial y final
-    const rotacionInicialX = 3; // Rotación inicial en el eje X
-    const rotacionFinalX = 6.30; // Rotación final en el eje X
+    const rotacionInicialX = 3;
+    const rotacionFinalX = 6.30;
 
     loader.load('/assets/static/modelos/iphone33.gltf', function (gltf) {
       model = gltf.scene;
