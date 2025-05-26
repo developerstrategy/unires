@@ -1,0 +1,32 @@
+<!-- 3dvideo.njk -->
+
+  <div id="3dvideo" class="interior-video">
+    <video id="videoElement" src="https://files.doclify.net/outloud-web-2023/media/826f6895-b935-4660-bdef-a6e1356418d4.mp4" muted></video>
+  </div>
+
+<script>
+  const videoElement = document.getElementById('videoElement');
+  videoElement.pause(); // Pausar el video inicialmente
+
+  document.addEventListener('scroll', () => {
+    const rect = videoElement.getBoundingClientRect();
+    console.log(videoElement.currentTime);
+    console.log('Posición top de 3dvideo con respecto al viewer:', rect.top);
+    
+    if (rect.top === 0) {
+      const stickyHeight = window.innerHeight; // Altura total del sticky
+      const scrollFraction = Math.min(1, (stickyHeight - Math.max(0, rect.top)) / stickyHeight); // Iniciar visualización cuando rect.top sea cero
+      const frameNumber = Math.floor(videoElement.duration * scrollFraction * (videoElement.fps || 1)); // Ajustar para que el final del video coincida con el final del sticky
+
+      // Verificar que frameNumber sea un número finito antes de asignarlo
+      if (isFinite(frameNumber)) {
+        videoElement.currentTime = frameNumber / (videoElement.fps || 1); // Avanzar el video frame a frame según el scroll
+      }
+    }
+  });
+
+  // Obtener los frames por segundo del video
+  videoElement.addEventListener('loadedmetadata', () => {
+    videoElement.fps = 60; // Asumir 30 fps como estándar
+  });
+</script>

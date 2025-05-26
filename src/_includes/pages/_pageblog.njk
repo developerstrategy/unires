@@ -1,0 +1,17 @@
+---
+layout: layout/base.njk
+---
+{% import global_index.base_modules+"_macros/_insert.njk" as insert %}
+
+{% include 'templates/bloghero.njk' %}
+
+
+<div class="section front-section bg-light  ">
+  <div class="container-global mx-auto   ">
+    <ul role="list" class="list-clear grid-1-2-4 ">
+      {% for post in collections.post | reverse %}
+      {% include 'templates/blog-loop.njk' %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

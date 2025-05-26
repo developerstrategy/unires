@@ -1,0 +1,36 @@
+<!-- bloghero.njk -->
+<section class="bg-color inview">
+  <div class=" container-global mx-auto    height-md ptr-120 pbr-120   ">
+    <div class="row section-x  align-middle  ">
+      <div class="col-xs-12 col-sm-7  front-text  ">
+
+        <div class="vertical-wrap mb-24">
+          <div class="vertical-inner">
+            <h1 class="fluid-5-b "> 
+
+              {% call insert.splitenpalabras( title   ) %} {% endcall %}
+
+
+            </h1> 
+          </div>
+        </div>
+        <div class="vertical-wrap-2 pb-24">
+          <div class="vertical-inner">
+            <h2 class="fluid-8-r mb-8">{{ subtitle }} </h2>
+          </div>
+        </div>
+
+
+      </div>
+      {% if not noheroimage %}
+      <div class="col-xs-12 col-sm-4 ">
+        {% if imagemini %}
+        <img class="video-cover" width="100%" height="auto" src="{{ imagemini }}" alt="{{ imageAlt }}" />
+        {% elseif image %}
+        <img class="" width="100%" height="auto" src=" {{ image }}" alt="{{ imageAlt }}" />
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

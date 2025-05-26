@@ -1,0 +1,75 @@
+.boxshow-inner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.boxshow-inner-img {
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: column;
+}
+.lateral-scroll-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  z-index: 10;
+  padding: 20px;
+}
+.truquibox {
+  border-radius: 16px;
+  width: 220px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  margin-bottom: 16px;
+}
+
+
+.truquibox10,
+.truquibox20,
+.truquibox30,
+.truquibox40,
+.truquibox50,
+.truquibox60,
+.truquibox70,
+.truquibox80,
+.truquibox90 {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.scrolllateral {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.boxshow1,
+.boxshow2,
+.boxshow3 {
+  flex: 1 0 100%;
+  height: calc(100vh - 200px);
+}
+.lateral-scroll-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  z-index: 10;
+  padding: 20px;
+}
+.interior-sticky {
+  position: sticky;
+  top: 200px;
+  z-index: 10;
+  /* el resto de estilos que necesites */
+}

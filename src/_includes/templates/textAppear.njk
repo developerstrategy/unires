@@ -1,0 +1,86 @@
+<!-- textAppear.njk -->
+
+<section id="textAppear" class="bg-color ptr-120 pbr-120 front-section o-hidden" >
+  <div class="watermark">
+    {# …svg sin cambios… #}
+  </div>
+
+  <div class="container-global-3 mx-auto">
+    <div class="row mb-32 inview">
+      <div class="col-xs-12 col-lg-11 text-center">
+        <div class="fluid-4-r mb-24">
+          {# 👇 Hook para SplitText #}
+          <span
+            class="js-appearText"
+            style="overflow:hidden;display:inline-block"
+          >
+            {{ global_index.textAppear_content }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+
+
+  // Registrar el plugin
+  gsap.registerPlugin(SplitText);
+
+  export function initAppearText() {
+    const targets = document.querySelectorAll('.js-appearText');
+    if (!targets.length) return;
+
+    targets.forEach(el => {
+      // 1. Separar palabras
+      const split = new SplitText(el, { type: 'words' });
+
+      // 2. Crear timeline (pausado)
+      const tl = gsap.timeline({ paused: true })
+        .from(split.words, {
+          duration: 0.6,
+          opacity: 0.2,
+          ease: 'power2.out',
+          stagger: 0.2
+        });
+
+      // 3. Medidas de la sección
+      const section = document.getElementById('textAppear') || document.body;
+      const sectionHeight = section.offsetHeight;
+
+      const update = () => {
+        const rect = section.getBoundingClientRect();
+        const visible = window.innerHeight - rect.top;
+        const progress = Math.min(1, Math.max(0, (visible - window.innerHeight * 0.4) / sectionHeight));
+        tl.progress(progress);
+      };
+
+      // 4. Sincronizar con Lenis o scroll nativo
+      if (window.lenis && typeof window.lenis.on === 'function') {
+        window.lenis.on('scroll', update);
+      } else {
+        window.addEventListener('scroll', update, { passive: true });
+      }
+
+      // Ejecutar al inicio por si ya está en vista
+      update();
+    });
+  }
+
+  // Bootstrap: crear Lenis si no existe
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.lenis) {
+      window.lenis = new Lenis({
+        smooth: true,
+        lerp: 0.1
+      });
+      const raf = time => {
+        window.lenis.raf(time);
+        requestAnimationFrame(raf);
+      };
+      requestAnimationFrame(raf);
+    }
+    initAppearText();
+  });
+</script>

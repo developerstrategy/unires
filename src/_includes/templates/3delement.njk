@@ -1,0 +1,143 @@
+<!-- 3delement.njk -->
+<div class="rotation-x hidden">
+  <!-- Aquí se mostrarán las propiedades del modelo 3D y la cámara -->
+  <span id="rotation-value">Rotación X: 0</span>
+  <span id="scale-value">Escala: 1</span>
+  <span id="position-value">Posición: (0, 0, 0)</span>
+  <span id="camera-position-value">Posición de la Cámara: (0, 0, 0)</span>
+  <span id="camera-rotation-value">Rotación de la Cámara: (0, 0, 0)</span>
+</div>
+
+
+<div id="3delement" class="three-js-model inview p-relative inview80" style="height: 100vh;">
+
+<div class="minibox">
+  <div class="minibox-content gradient-lila mt-64">
+    <div class="title-l">1 {{ global_index.3delement_0 }}</div>
+    <p class="title-l"> {{ global_index.3delement_0_content }}</p>
+  </div>
+</div>
+<div class="minibox">
+  <div class="minibox-content gradient-gris mt-64 mr-32">
+    <div>2 {{ global_index.3delement_1 }}</div>
+    <p class="title-l"> {{ global_index.3delement_1_content }}</p>
+  </div>
+</div>
+<div class="minibox">
+  <div class="minibox-content gradient-lila mt-64">
+    <div>3 {{ global_index.3delement_2 }}</div>
+    <p class="title-l"> {{ global_index.3delement_2_content }}</p>
+  </div>
+</div>
+<div class="minibox">
+  <div class="minibox-content gradient-verde">
+    <div>4 {{ global_index.3delement_3 }}</div>
+    <p class="title-l"> {{ global_index.3delement_3_content }}</p>
+  </div>
+</div>
+<div class="minibox">
+  <div class="minibox-content gradient-gris">
+    <div> 5 {{ global_index.3delement_4 }}</div>
+    <p class="title-l"> {{ global_index.3delement_4_content }}</p>
+  </div>
+</div>
+<div class="minibox">
+  <div class="minibox-content gradient-amarillo">
+      <div> 6 {{ global_index.3delement_5 }}</div>
+      <p class="title-l"> {{ global_index.3delement_5_content }}</p>
+  </div>
+</div>
+
+  <!-- Aquí se insertará el elemento 3D usando Three.js -->
+  <script type="module">
+    import * as THREE from 'https://cdn.skypack.dev/three@0.132.2';
+    import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js';
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true }); // Hacer el fondo transparente
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.domElement.style.width = '100%'; // Establecer el ancho del canvas al 100%
+    renderer.domElement.style.height = 'auto'; // Establecer la altura del canvas a auto
+    document.getElementById('3delement').appendChild(renderer.domElement);
+
+    // Añadir luz ambiental
+    const ambientLight = new THREE.AmbientLight(0x404040, 1); // Luz ambiental con intensidad 2
+    scene.add(ambientLight);
+
+    // Añadir luz direccional para iluminar el borde metálico
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // Luz direccional con intensidad 2
+    directionalLight.position.set(5, 5, 5); // Posicionar la luz en un ángulo de 45 grados
+    scene.add(directionalLight);
+
+    // Añadir luz puntual para resaltar los bordes metálicos
+    const pointLight = new THREE.PointLight(0xaaaaaa, 1); // Luz puntual con intensidad 1.5
+    pointLight.position.set(0, 10, 10); // Posicionar la luz sobre el modelo
+    scene.add(pointLight);
+
+    const loader = new GLTFLoader();
+    let model;
+
+    // Variables para la rotación inicial y final
+    const rotacionInicialX = 3; // Rotación inicial en el eje X
+    const rotacionFinalX = 6.30; // Rotación final en el eje X
+
+    loader.load('/assets/static/modelos/iphone33.gltf', function (gltf) {
+      model = gltf.scene;
+      model.scale.set(20, 20, 20); // Aumentar el tamaño del modelo
+      model.rotation.y = Math.PI; // Girar el modelo 180 grados en el eje Y
+      model.rotation.x = rotacionInicialX; // Usar la variable para la rotación inicial
+      scene.add(model);
+    }, undefined, function (error) {
+      console.error(error);
+    });
+
+    camera.position.z = 3; // Acercar la cámara para que el modelo se vea más grande
+    camera.position.y = 1; // Mover la cámara más arriba
+
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+
+      const cameraPositionDisplay = document.getElementById('camera-position-value');
+      const cameraRotationDisplay = document.getElementById('camera-rotation-value');
+
+      cameraPositionDisplay.textContent = `Posición de la Cámara: (${camera.position.x.toFixed(2)}, ${camera.position.y.toFixed(2)}, ${camera.position.z.toFixed(2)})`;
+      cameraRotationDisplay.textContent = `Rotación de la Cámara: (${camera.rotation.x.toFixed(2)}, ${camera.rotation.y.toFixed(2)}, ${camera.rotation.z.toFixed(2)})`;
+
+      if (model) {
+        const rotationDisplay = document.getElementById('rotation-value');
+        const scaleDisplay = document.getElementById('scale-value');
+        const positionDisplay = document.getElementById('position-value');
+
+        rotationDisplay.textContent = `Rotación X: ${model.rotation.x.toFixed(2)}`;
+        scaleDisplay.textContent = `Escala: (${model.scale.x.toFixed(2)}, ${model.scale.y.toFixed(2)}, ${model.scale.z.toFixed(2)})`;
+        positionDisplay.textContent = `Posición: (${model.position.x.toFixed(2)}, ${model.position.y.toFixed(2)}, ${model.position.z.toFixed(2)})`;
+      }
+    }
+
+    animate();
+
+    function onResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    window.addEventListener('resize', onResize);
+
+    document.addEventListener('scroll', () => {
+      const element = document.getElementById('3delement');
+      if (!element || !model) return;
+
+      const rect = element.getBoundingClientRect();
+      if (rect.bottom < 0) return;
+
+      const visibleHeight = window.innerHeight * 0.8; // 80% de la altura visible
+      const scrollFraction = Math.min(1, (visibleHeight - Math.max(0, rect.top)) / visibleHeight);
+      const rotationX = rotacionInicialX + ((rotacionFinalX - rotacionInicialX) * (scrollFraction * 1.5)); // Aumentar la velocidad de rotación
+      model.rotation.x = Math.max(rotacionInicialX, Math.min(rotationX, rotacionFinalX)); // Limitar la rotación al valor mínimo y máximo
+
+    });
+  </script>
+</div>

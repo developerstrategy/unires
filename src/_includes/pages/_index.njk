@@ -1,0 +1,48 @@
+---
+layout: layout/base.njk
+colorHeader: has-light-menu
+---
+
+{% set seccion = 'home' %}
+
+
+{% set noheroimage = [] %}
+{% import global_index.base_modules+"_macros/_insert.njk" as insert %}
+{% import "macros/_insert.njk" as insert %}
+
+
+
+
+<div class="main-article">
+  {% include 'templates/introCta_2.njk' %}
+  {% include 'templates/textAppear.njk' %}
+  {% include 'templates/3delement.njk' %}
+  {% include 'templates/lateralScroll.njk' %}
+  {% include 'templates/unires_1.njk' %}
+  {% include 'templates/unires_2.njk' %}
+ 
+
+
+
+
+
+
+
+
+  {% include "templates/benefits_2.njk" %}
+
+
+
+  {# {% include "templates/contacta_1.njk" %} #}
+
+  {% include "templates/contacta_4.njk" %}
+
+  {% include 'templates/parallaxboxes.njk' %}
+
+  {% include 'templates/footer_3.njk' %}
+
+
+</div>
+
+
+

@@ -1,0 +1,30 @@
+---
+layout: layout/base.njk
+colorHeader: has-light-menu
+---
+{% set seccion = 'home' %}
+{% set noheroimage = [] %}
+{% import global_index.base_modules+"_macros/_insert.njk" as insert %}
+{% import "macros/_insert.njk" as insert %}
+<div class="main-article">
+  {% include 'templates/introCta_2.njk' %}
+  {% include 'templates/textAppear.njk' %}
+
+
+
+  <script>
+    document.addEventListener('scroll', function () {
+      const horizontalDiv = document.querySelector('.scrolllateral');
+      if (horizontalDiv) {
+        const rect = horizontalDiv.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          const section = document.getElementById('lateralScroll');
+          if (section) {
+            const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+            const scrollPosition = window.scrollY - sectionTop;
+            horizontalDiv.style.transform = `translateX(${-scrollPosition}px)`;
+          }
+        }
+      }
+    });
+  </script>

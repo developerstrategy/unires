@@ -1,0 +1,29 @@
+---
+layout: layout/base.njk
+colorHeader: has-light-menu
+---
+
+
+
+{% set noheroimage = [] %}
+{% import global_index.base_modules+"_macros/_insert.njk" as insert %}
+{% import "macros/_insert.njk" as insert %}
+
+
+{% set seccion = 'servicio' %}
+
+<div class="main-article">
+  {% include 'templates/introCta_2.njk' %}
+
+  {% include "templates/introBenefits_2.njk" %}
+
+  {% include "templates/benefits_2.njk" %}
+
+
+  {% include "templates/contacta_4.njk" %}
+
+
+
+</div>
+
+

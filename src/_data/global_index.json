@@ -1,0 +1,145 @@
+{
+  "base_modules": "../../../node_modules/boilerplate-modules/src/_includes/",
+  "search_console": "VJczrBeO31v4cRQZR4yNkB6NO117Ll6bUrrOMFnD3pk",
+  "c_gray": "#727272",
+  "c_primary": "#000000",
+  "c_secondary": "#000000",
+  "c_accent": "#ff0000",
+  "bg_dark": "#1D1E23",
+  "bg_light": "#f3f2f0",
+  "c_bg_light": "#2b2a28",
+  "c_bg_dark": "#f7f6f5",
+  "bg_primary": "linear-gradient(120deg, #E14EF7 0%, #8E44F6 30%, #3D40F5 100%)",
+  "btn_radius": "8px",
+  "padding-": "16px",
+  "title": "Magna Urbis",
+  "lang": "es-es",
+  
+  "footer": "",
+  "url": "https://unires.com",
+  "legal_nombre_titular": "Magna Urbis BCN S.L.",
+  "legal_nif_titular": "número de identificación fiscal",
+  "legal_direccion_titular": "dirección del titular",
+  "empresa_legal_direccion": "Avda.xxxxx",
+  "empresa_legal": "UniRes S.L.",
+  "empresa_corto": "nombre comercial",
+  "website": "www.unires.com",
+  "whatsapp": "",
+  "direction_link": "enlace de ubicación",
+  "empresa_copyright": " © 2025 UniRes",
+  "author": "Manuel Ruiz",
+  "authorweb": "design-systems.es",
+  "imageDir": "/assets/static/images/",
+  "contact_img": "/assets/static/images/1.jpg",
+  "home_image": "/assets/static/images/casa2.webp",
+  "home_video": "https://res.cloudinary.com/manuel-ruiz/video/upload/v1731396624/xvyicosnmkxss2z2meyo.mp4",
+  "seo_title": "título seo",
+  "seo_description": "descripción seo",
+  "tag_manager": "",
+  "googlemaps_link": "",
+  "googlemaps_iframe": "",
+  "social_linkedin": "https://www.linkedin.com/",
+  "social_youtube": "https://www.youtube.com/",
+  "social_instagram": "https://www.instagram.com/",
+
+  "hero_btn_1": "Reporting en residencias",
+  "hero_btn_2": "Desde el móvil",
+  "hero_description": "Ofrece una herramienta de reporting sobre tus residentes de forma sencilla.",
+  "hero_title": "Mantén los séniors de tu residencia y sus familiares siempre en contacto.",
+
+
+  "hero_btn": "Solicita una demo",
+  "introbenefits2_subtitle": "Gestión y confianza",
+  "introbenefits2_content": "UniRes nace con la misión de democratizar la comunicación entre las Residencias, los residentes y sus seres queridos. Todo en una misma aplicación de una forma sencilla y sobretodo transparente.",
+
+
+
+  "3delement_0":"Sueño",
+  "3delement_0_content":"dfssdfsdfs",
+  "3delement_1":"Desayuno",
+  "3delement_1_content":"dfssdfsdfs",
+  "3delement_2":"Mente",
+  "3delement_2_content":"dfssdfsdfs",
+  "3delement_3":"Alimentación",
+  "3delement_3_content":"dfssdfsdfs",
+  "3delement_4":"Enalapril",
+  "3delement_4_content":"dfssdfsdfs",
+  "3delement_5":"Físico",
+  "3delement_5_content":"dfssdfsdfs",
+
+
+
+
+  "unires_1_content": "Unirte a UniRes ^ -es -muy -fácil",
+
+  "unires_1_subtitle": "La variedad de servicios más completa.",
+  "unires_1_subcontent": "UniRes es una aplicación móvil que permite a los residentes de una residencia comunicarse con el personal de la misma de forma sencilla y transparente.",
+  "unires_1_subcontent2": "UniRes es una aplicación móvil que permite a los residentes de una residencia comunicarse con el personal de la misma de forma sencilla y transparente.",
+
+
+
+  "unires_2_content": "Sistema de administración ^ -aún -más -sencillo ",
+  "unires_2_subtitle": "La facilidad de uso para el personal de tu residencia también es importante. Interfaz limpia e intuitiva para gestionar la información de los residentes de forma rápida..",
+
+
+
+
+
+  "service_subtitle": "Para que no te tengas que preocupar de nada",
+  "service_title": "SOLUCIONES PARA PROPIETARIOS",
+  "services": [
+    {
+      "service_name": "Administración de fincas",
+      "service_content": "Administramos inmuebles residenciales y Comunidades de Propietarios en Barcelona.",
+      "service_img": "servicio_1"
+    },
+    {
+      "service_name": "Patrimonios inmobiliarios",
+      "service_content": "Adaptamos la gestión de tus bienes  a tus necesidades, asegurando la optimización entre seguridad  y rentabilidad que mejor se adapte a tu perfil.",
+      "service_img": "servicio_2"
+    },
+    {
+      "service_name": "Gestión comercial",
+      "service_content": "Nos encargamos de alquilar o vender tus propiedades, y te ayudamos a encontrar aquellas que se ajusten a tus requisitos patrimoniales.",
+      "service_img": "servicio_3"
+    }
+
+    ,
+    {
+      "service_name": "Asesoria jurídica",
+      "service_content": "Te asesoramos respecto a contratos inmobiliarios, sucesiones y fiscalidad inmobiliaria.",
+      "service_img": "servicio_4"
+    }
+  ],
+
+  "textAppear_content": "UniRes nace con la misión de democratizar la comunicación entre las Residencias, los residentes y sus seres queridos. Todo en una misma aplicación de una forma sencilla y sobretodo transparente.",
+  "introbenefits_title": "¿Cómo me uno a UniRes?",
+  "introbenefits_subtitle": "Ofrecer UniRes a tus clientes es muy fácil",
+  "introbenefits_1title": "Profesionalidad",
+  "introbenefits_1description": "El sector inmobiliario se vuelve más complejo cada día. Déjalo en manos de expertos en administración de fincas y gestión de patrimonios.",
+  "introbenefits_2title": "Dedicación",
+  "introbenefits_2description": "Con cuatro generaciones de experiencia en la gestión de fincas, evolucionamos constantemente para brindarte el servicio más completo.",
+  "introbenefits_3title": "Fiabilidad",
+  "introbenefits_3description": "Siempre a tu disposición, ofreciendo respuestas proactivas a las necesidades de tu patrimonio inmobiliario.",
+
+  "whytitle1_title": "¿Quiénes somos?",
+  "whytitle1_subtitle": "NUESTRA HISTORIA",
+  "whytitle1_description": "Somos una empresa inmobiliaria dedicada a la administración de comunidades de propietarios y a la gestión de patrimonios en régimen de alquiler, enfocada en la conservación y optimización de los activos de nuestros clientes.",
+  "whytitle1_description2": "Nuestra misión es proporcionar un servicio integral y personalizado, orientado a maximizar el valor de los bienes inmobiliarios de nuestros clientes. A lo largo de nuestra trayectoria, hemos desarrollado un enfoque proactivo en la gestión de patrimonios y administración de fincas, garantizando la protección, el mantenimiento y el crecimiento de los activos bajo nuestra supervisión. ^^ Nuestro compromiso con la transparencia, la cercanía y la excelencia en cada uno de nuestros servicios nos ha permitido consolidar la mejor relación de confianza con nuestros clientes.",  
+  "box_img_title": "Hoy en día no es suficiente con simplemente gestionar. Se requiere rigor, transparencia, cercanía y profesionalismo.",
+  "box_img_description": "La administración de fincas es una tarea crucial que debe estar en manos de una empresa con experiencia y solvencia, por eso adaptamos nuestros servicios a las necesidades específicas de cada Comunidad de Propietarios.",
+  "contacta_4_title": "Contacta ^ -con -nosotros",
+  "contacta_4_subtitle": "¿Tienes alguna pregunta?",
+  "contacta_5_title": "Visítanos",
+  "contacta_5_subtitle": "NUESTRA UBICACIÓN",
+  "contacta_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.898683892382!2d2.1614165763079742!3d41.39800659533604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a294dae03357%3A0xae747d3d1080c597!2sCasa%20Les%20Punxes%20x%20Cloudworks!5e0!3m2!1ses!2ses!4v1725699856594!5m2!1ses!2ses",
+  "banner_button": "ENVIAR",
+  
+  "direction": "Avda. Diagonal, 416, 1-1, 08037, Barcelona (Casa de les Punxes)",
+  "telefono": "+34 93 619 12 16",
+  "email": "info@unires.com",
+  "footer_1": "unires.com",
+  "footer_2": "Magna Urbis - Administración de fincas y gestión patrimonial en Barcelona desde 1908.",
+  "footer_3": "© unires.com, 2024. Todos los derechos reservados.",
+  "footer_4": "Administración de fincas en Barcelona"
+}

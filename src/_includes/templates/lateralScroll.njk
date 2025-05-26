@@ -1,0 +1,98 @@
+<!-- lateralScroll.njk -->
+
+
+<div class=" "> 
+
+<section class="inview " id="lateralScroll" data-scroll-section>
+  <div class="container-2 text-center pbr-120
+  ">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="fluid-4-b mb-24">¿Qué hace UniRes por tí y los tuyos?        {{ insert.splitenpalabras3(global_index.unires_1_content | safe ) }}</div>
+        <div class="fluid-9-r c-accent">La variedad de servicios más completa        {{ insert.splitenpalabras3(global_index.unires_1_content | safe ) }}</div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <div class="interior-content  ">
+  
+      <div class="interior-sticky color-dark ">
+        <div class=" scrolllateral  c-accent mb-24">
+          <div class="boxshow1">
+            <div class="boxshow-inner">
+              <div>
+                <div class="truquibox10 truquibox"> Diferentes tipos de perfil para los familiares, incluído un perfil de tutor para mayor control.</div>
+                <div class="truquibox20 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+              </div>
+              <div class="boxshow-inner-img"> <img width="100%" src="/assets/static/images/plano.webp" alt="img"></div>
+              <div class="truquibox30 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+            </div>
+          </div>
+          <div class="boxshow2">
+            <div class="boxshow-inner">
+              <div>
+                <div class="truquibox40 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+                <div class="truquibox50 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+              </div>
+              <div class="boxshow-inner-img"> <img width="100%" src="/assets/static/images/plano.webp" alt="img"></div>
+              <div class="truquibox60 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+            </div>
+          </div>
+          <div class="boxshow3">
+            <div class="boxshow-inner">
+              <div>
+                <div class="truquibox70 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+                <div class="truquibox80 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+              </div>
+              <div class="boxshow-inner-img"> <img width="100%" src="/assets/static/images/plano.webp" alt="img"></div>
+              <div class="truquibox90 truquibox"> Gestiona los horarios de los familiares y los eventos de la residencia.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  let lastScrollTop = 0;
+  document.addEventListener('scroll', () => {
+    const horizontalDiv = document.querySelector('.scrolllateral');
+    if (!horizontalDiv) return;
+    const rect = horizontalDiv.getBoundingClientRect();
+    if (rect.top >= window.innerHeight || rect.bottom < 0) return;
+    const section = document.getElementById('lateralScroll');
+    if (!section) return;
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    const scrollPosition = window.scrollY - sectionTop;
+    const scrollPercentage = scrollPosition / section.offsetHeight;
+    const truquiboxes = [
+      { element: document.querySelector('.truquibox10'), threshold: 0.10 },
+      { element: document.querySelector('.truquibox20'), threshold: 0.15 },
+      { element: document.querySelector('.truquibox30'), threshold: 0.20 },
+      { element: document.querySelector('.truquibox40'), threshold: 0.35 },
+      { element: document.querySelector('.truquibox50'), threshold: 0.40 },
+      { element: document.querySelector('.truquibox60'), threshold: 0.45 },
+      { element: document.querySelector('.truquibox70'), threshold: 0.60 },
+      { element: document.querySelector('.truquibox80'), threshold: 0.65 },
+      { element: document.querySelector('.truquibox90'), threshold: 0.75 }
+    ];
+    const currentScrollTop = window.scrollY;
+    const isScrollingDown = currentScrollTop > lastScrollTop;
+    lastScrollTop = currentScrollTop;
+    truquiboxes.forEach(({ element, threshold }) => {
+      if (element) {
+        if (isScrollingDown && scrollPercentage >= threshold) {
+          element.style.opacity = 1;
+        } else if (!isScrollingDown && scrollPercentage < threshold) {
+          element.style.opacity = 0;
+        }
+      }
+    });
+    const translateValue = scrollPercentage >= 0.60 ? '-200vw' :
+      scrollPercentage >= 0.30 ? '-100vw' : '0';
+    horizontalDiv.style.transition = 'transform 0.5s ease-in-out';
+    horizontalDiv.style.transform = `translateX(${translateValue})`;
+  });
+</script>
