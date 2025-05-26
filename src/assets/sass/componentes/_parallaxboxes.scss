@@ -68,6 +68,8 @@
   padding: 20px;
 }
 .interior-sticky {
+  width: 100%;
+  overflow: hidden;
   position: sticky;
   top: 200px;
   z-index: 10;
