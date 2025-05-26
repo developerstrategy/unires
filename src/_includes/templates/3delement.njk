@@ -8,7 +8,6 @@
   <span id="camera-rotation-value">Rotación de la Cámara: (0, 0, 0)</span>
 </div>
 
-
 <div id="3delement" class="three-js-model inview p-relative inview80" style="height: 100vh;">
 
 <div class="minibox">
@@ -61,19 +60,14 @@
     renderer.domElement.style.height = 'auto'; // Establecer la altura del canvas a auto
     document.getElementById('3delement').appendChild(renderer.domElement);
 
-    // Añadir luz ambiental
-    const ambientLight = new THREE.AmbientLight(0x404040, 1); // Luz ambiental con intensidad 2
+    // Ajustar la luz ambiental para que la textura no se vea sobreexpuesta
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Luz ambiental con intensidad reducida
     scene.add(ambientLight);
 
     // Añadir luz direccional para iluminar el borde metálico
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // Luz direccional con intensidad 2
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // Luz direccional con intensidad reducida
     directionalLight.position.set(5, 5, 5); // Posicionar la luz en un ángulo de 45 grados
     scene.add(directionalLight);
-
-    // Añadir luz puntual para resaltar los bordes metálicos
-    const pointLight = new THREE.PointLight(0xaaaaaa, 1); // Luz puntual con intensidad 1.5
-    pointLight.position.set(0, 10, 10); // Posicionar la luz sobre el modelo
-    scene.add(pointLight);
 
     const loader = new GLTFLoader();
     let model;
