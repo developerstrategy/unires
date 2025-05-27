@@ -15279,15 +15279,16 @@ svg#bubble-whatsapp-icon path {
     opacity: 0;
   }
 }
-.interior-content {
-  position: relative;
-  z-index: 10;
-  overflow: auto;
-}
 @media (min-width: 768px) {
   .interior-content {
-    overflow: hidden;
     height: 500vh;
+  }
+}
+@media (max-width: 768px) {
+  .interior-content {
+    position: relative;
+    z-index: 10;
+    overflow: auto;
   }
 }
 
@@ -15374,12 +15375,12 @@ svg#bubble-whatsapp-icon path {
   width: 3000px;
   overflow: hidden;
   position: relative;
-  top: 200px;
   z-index: 10;
 }
 @media (min-width: 768px) {
   .interior-sticky {
     position: sticky;
+    top: 200px;
     width: 100%;
   }
 }

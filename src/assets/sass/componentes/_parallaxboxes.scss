@@ -1,12 +1,17 @@
 .interior-content {
-  position: relative;
-  z-index: 10;
-  overflow: auto;
+
 
 
   @media (min-width: 768px) {
-    overflow: hidden;
+
     height: 500vh;
+
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    z-index: 10;
+    overflow: auto;
 
   }
 
@@ -89,11 +94,12 @@
   width: 3000px;
   overflow: hidden;
   position: relative;
-  top: 200px;
+
   z-index: 10;
 
   @media (min-width: 768px) {
     position: sticky;
+    top: 200px;
     width: 100%;
 
   }

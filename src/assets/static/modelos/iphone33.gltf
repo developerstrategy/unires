@@ -103,14 +103,14 @@
             "count": 64,
             "type": "VEC3",
             "max": [
-                0.009119000285863877,
-                0.006854999344795942,
-                -0.13793699443340302
+                -0.006192710716277361,
+                0.011549767106771469,
+                -0.01551020797342062
             ],
             "min": [
-                0.00546600017696619,
-                0.006546999793499708,
-                -0.14158999919891358
+                -0.009819711558520794,
+                0.011549767106771469,
+                -0.01913721114397049
             ]
         },
         {
@@ -551,11 +551,6 @@
             "name": "composited_baseColor",
             "uri": "iphone33_images/composited_baseColor.jpg",
             "mimeType": "image/jpeg"
-        },
-        {
-            "name": "composited_roughness",
-            "uri": "iphone33_images/composited_roughness.png",
-            "mimeType": "image/png"
         }
     ],
     "materials": [
@@ -567,7 +562,7 @@
                     0.800000011920929,
                     1.0
                 ],
-                "roughnessFactor": 0.10000002384185791
+                "roughnessFactor": 0
             },
             "name": "frame",
             "doubleSided": true
@@ -580,7 +575,8 @@
                     0.0,
                     1.0
                 ],
-                "metallicFactor": 0.0
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0
             },
             "name": "mlack",
             "doubleSided": true
@@ -593,8 +589,8 @@
                     0.0,
                     1.0
                 ],
-                "metallicFactor": 0.5,
-                "roughnessFactor": 0.5
+                "metallicFactor": 0,
+                "roughnessFactor": 0
             },
             "name": "cam-mat",
             "doubleSided": true
@@ -608,7 +604,7 @@
                     1.0
                 ],
                 "metallicFactor": 0.0,
-                "roughnessFactor": 0.0
+                "roughnessFactor": 0
             },
             "name": "bezel",
             "doubleSided": true
@@ -621,7 +617,7 @@
                     0.7000000476837158,
                     1.0
                 ],
-                "roughnessFactor": 0.3999999761581421
+                "roughnessFactor": 0
             },
             "name": "ant",
             "doubleSided": true
@@ -632,9 +628,17 @@
                     "index": 0
                 },
                 "metallicFactor": 0.0,
-                "metallicRoughnessTexture": {
-                    "index": 1
-                }
+                "roughnessFactor": 1.0,
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "emissiveFactor": [1.0, 1.0, 1.0],
+            "emissiveTexture": {
+                "index": 0
             },
             "name": "disp",
             "doubleSided": true
@@ -648,7 +652,7 @@
                     0.9216867685317993
                 ],
                 "metallicFactor": 0.0,
-                "roughnessFactor": 0.0
+                "roughnessFactor": 0
             },
             "alphaMode": "BLEND",
             "name": "cam_glass%2E 001",
@@ -951,11 +955,6 @@
             "name": "composited_baseColor",
             "sampler": 0,
             "source": 0
-        },
-        {
-            "name": "composited_roughness",
-            "sampler": 0,
-            "source": 1
         }
     ],
     "scene": 0
