@@ -1361,11 +1361,11 @@ input[type=number] {
 }
 
 .height-lg {
-  min-height: 90vh;
+  min-height: 50vh;
 }
 @media (min-width: 768px) {
   .height-lg {
-    min-height: 70vh;
+    min-height: 50vh;
   }
 }
 
@@ -15293,7 +15293,7 @@ svg#bubble-whatsapp-icon path {
 }
 @media (min-width: 768px) {
   .interior-content {
-    height: 500vh;
+    height: 600vh;
   }
 }
 @media (max-width: 768px) {
@@ -15355,7 +15355,13 @@ svg#bubble-whatsapp-icon path {
 .truquibox60,
 .truquibox70,
 .truquibox80,
-.truquibox90 {
+.truquibox90,
+.truquibox100,
+.truquibox110,
+.truquibox120,
+.truquibox130,
+.truquibox140,
+.truquibox150 {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -17019,6 +17025,7 @@ html.lenis body {
 .minibox {
   position: absolute;
   width: 166px;
+  z-index: 10;
   filter: drop-shadow(0px 14px 19.4px rgba(0, 0, 0, 0.1));
   border-radius: 24px;
   opacity: 0;
@@ -17084,4 +17091,23 @@ html.lenis body {
 .box-grey {
   background-color: #F7F7F7;
   border-radius: 32px;
+}
+
+.imagecentral {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.imagecentral img {
+  width: 100%;
+}
+
+.is-inview .imagecentral {
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
