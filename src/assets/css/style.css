@@ -11991,6 +11991,9 @@ svg {
 
 .unires2-box-a1 {
   grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .unires2-box-a1 {
@@ -12001,6 +12004,9 @@ svg {
 .unires2-box-a2 {
   grid-row: 2;
   background-color: rgba(252, 79, 79, 0.1725490196);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .unires2-box-a2 {
@@ -14328,6 +14334,9 @@ svg {
 
 .unires2-box-a1 {
   grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .unires2-box-a1 {
@@ -14338,6 +14347,9 @@ svg {
 .unires2-box-a2 {
   grid-row: 2;
   background-color: rgba(252, 79, 79, 0.1725490196);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .unires2-box-a2 {
@@ -15312,7 +15324,7 @@ svg#bubble-whatsapp-icon path {
 }
 @media (min-width: 768px) {
   .boxshow-inner-img {
-    flex-basis: 30%;
+    flex-basis: 40%;
   }
 }
 
@@ -15380,7 +15392,7 @@ svg#bubble-whatsapp-icon path {
 @media (min-width: 768px) {
   .interior-sticky {
     position: sticky;
-    top: 200px;
+    top: 16%;
     width: 100%;
   }
 }
