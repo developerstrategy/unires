@@ -10,6 +10,10 @@
   src: url("/assets/fonts/neutrif/font-regular.woff2") format("woff2"), url("/assets/fonts/neutrif/font-regular.woff") format("woff");
 }
 @font-face {
+  font-family: "font-medium";
+  src: url("/assets/fonts/neutrif/font-medium.woff2") format("woff2"), url("/assets/fonts/neutrif/font-medium.woff") format("woff");
+}
+@font-face {
   font-family: "font-bold";
   src: url("/assets/fonts/neutrif/font-bold.woff2") format("woff2"), url("/assets/fonts/futura/font-bold.woff") format("woff");
   font-display: swap;
@@ -2093,8 +2097,8 @@ mark {
 }
 
 .text-12-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
   font-size: 12px;
   line-height: 1.2;
 }
@@ -2126,8 +2130,8 @@ mark {
 }
 
 .text-14-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
 }
@@ -2159,8 +2163,8 @@ mark {
 }
 
 .text-16-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
 }
@@ -2192,8 +2196,8 @@ mark {
 }
 
 .text-18-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -2225,8 +2229,8 @@ mark {
 }
 
 .text-20-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -2258,8 +2262,8 @@ mark {
 }
 
 .text-24-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
 }
@@ -2314,6 +2318,12 @@ mark {
     font-size: 14px;
     line-height: 1.1;
   }
+  .title-l-m {
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+  }
   .p1 {
     font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
     font-weight: 400;
@@ -2333,8 +2343,8 @@ mark {
     line-height: 1.4;
   }
   .p4 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 600;
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.4;
   }
@@ -2360,6 +2370,10 @@ mark {
     font-size: 18px;
     line-height: 1.1;
   }
+  .title-l-m {
+    font-size: 16px;
+    line-height: 1.6;
+  }
   .p1 {
     font-size: 16px;
     line-height: 1.6;
@@ -2379,8 +2393,8 @@ mark {
 }
 @media (min-width: 1px) {
   .titularbase-m {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 600;
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
   }
@@ -2447,8 +2461,8 @@ mark {
 }
 
 .fluid-12-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-12-m {
   font-size: 12px;
@@ -2552,8 +2566,8 @@ mark {
 }
 
 .fluid-9-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-9-m {
   font-size: 14px;
@@ -2657,8 +2671,8 @@ mark {
 }
 
 .fluid-8-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-8-m {
   font-size: 16px;
@@ -2762,8 +2776,8 @@ mark {
 }
 
 .fluid-7-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-7-m {
   font-size: 18px;
@@ -2867,8 +2881,8 @@ mark {
 }
 
 .fluid-6-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-6-m {
   font-size: 20px;
@@ -2972,8 +2986,8 @@ mark {
 }
 
 .fluid-5-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-5-m {
   font-size: 30px;
@@ -3077,8 +3091,8 @@ mark {
 }
 
 .fluid-4-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-4-m {
   font-size: 40px;
@@ -3182,8 +3196,8 @@ mark {
 }
 
 .fluid-3-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-3-m {
   font-size: 40px;
@@ -3287,8 +3301,8 @@ mark {
 }
 
 .fluid-2-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-2-m {
   font-size: 40px;
@@ -3392,8 +3406,8 @@ mark {
 }
 
 .fluid-1-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 .fluid-1-m {
   font-size: 60px;
@@ -3468,8 +3482,8 @@ mark {
 
 .text-medium,
 .font-medium {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-  font-weight: 600;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-weight: 500;
 }
 
 .text-semibold,
@@ -10115,7 +10129,7 @@ hr {
 }
 
 .text-12-l {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
   font-size: 12px;
 }
 
@@ -10527,7 +10541,7 @@ strong {
 }
 
 .font-m {
-  font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+  font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
 }
 
 .font-b {
@@ -15339,6 +15353,7 @@ svg#bubble-whatsapp-icon path {
 }
 
 .truquibox {
+  position: relative;
   border-radius: 16px;
   width: 220px;
   padding: 16px;
@@ -17038,39 +17053,59 @@ html.lenis body {
   border-radius: 24px;
 }
 
-.minibox:nth-child(1) {
+.minibox:nth-child(1),
+.minibox:nth-child(2),
+.minibox:nth-child(3) {
   right: calc(50vw + 50px);
+}
+@media (min-width: 768px) {
+  .minibox:nth-child(1),
+  .minibox:nth-child(2),
+  .minibox:nth-child(3) {
+    right: calc(50vw + 100px);
+  }
+}
+
+.minibox:nth-child(4),
+.minibox:nth-child(5),
+.minibox:nth-child(6) {
+  left: calc(50% + 50px);
+}
+@media (min-width: 768px) {
+  .minibox:nth-child(4),
+  .minibox:nth-child(5),
+  .minibox:nth-child(6) {
+    left: calc(50% + 100px);
+  }
+}
+
+.minibox:nth-child(1) {
   top: 10%;
   transition-delay: 0.4s;
 }
 
 .minibox:nth-child(2) {
   width: 200px;
-  right: calc(50vw + 50px);
   top: 30%;
   transition-delay: 1s;
 }
 
 .minibox:nth-child(3) {
-  right: calc(50% + 50px);
   top: 50%;
   transition-delay: 0s;
 }
 
 .minibox:nth-child(4) {
-  left: calc(50% + 50px);
   top: 10%;
   transition-delay: 0.8s;
 }
 
 .minibox:nth-child(5) {
-  left: calc(50% + 50px);
   top: 30%;
   transition-delay: 0.2s;
 }
 
 .minibox:nth-child(6) {
-  left: calc(50% + 50px);
   top: 50%;
   transition-delay: 0.6s;
 }
@@ -17110,4 +17145,28 @@ html.lenis body {
 .is-inview .imagecentral {
   opacity: 1;
   transform: translate(-50%, -50%);
+}
+
+.lineleft {
+  position: absolute;
+  top: -71px;
+  left: 64px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.lineleft svg {
+  width: 100%;
+}
+
+.lineright {
+  position: absolute;
+  top: -71px;
+  right: 64px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.lineright svg {
+  width: 100%;
 }

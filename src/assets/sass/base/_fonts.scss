@@ -11,6 +11,12 @@
 }
 
 @font-face {
+  font-family: "font-medium";
+  src: url("/assets/fonts/neutrif/font-medium.woff2") format("woff2"),
+    url("/assets/fonts/neutrif/font-medium.woff") format("woff");
+}
+
+@font-face {
   font-family: "font-bold";
   src: url("/assets/fonts/neutrif/font-bold.woff2") format("woff2"),
     url("/assets/fonts/futura/font-bold.woff") format("woff");
