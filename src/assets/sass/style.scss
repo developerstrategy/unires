@@ -99,6 +99,18 @@ body {
   background-color: #0B1A32;
   transition: background-color 0.5s ease;
   color: #fff;
+
+
+.logo-simple{
+  svg.textlogo{
+    path{
+      fill: white;
+    }
+
+  }
+
+}
+
 }
 
 p {

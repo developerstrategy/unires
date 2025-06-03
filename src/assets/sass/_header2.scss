@@ -13,13 +13,12 @@ $header-desktop: 200px;
   transition: all ease 0.3s;
   transform: translateY(-100%);
 
-  background: rgba(255, 255, 255, 0.52);
-  backdrop-filter: blur(12.15px);
-  /* Note: backdrop-filter has minimal browser support */
+
   display: flex;
   align-items: center;
 
 }
+
 
 
 #menu-toggle{

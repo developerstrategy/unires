@@ -112,9 +112,6 @@ b {
   }
 }
 
-svg{
-  fill: transparent!important;
-}
 
 .btn.btn--big{
   font-size: 12px;
@@ -130,12 +127,23 @@ svg{
 .logo-simple{
 width: 138px;
 margin-top: 8px;
-svg{
-  width: 100%;
-  height: 100%;
-}
+
   @media (min-width: $break-md) {
     width: 190px;
+  }
+}
+
+
+.imalogo{
+  width: 50px;
+  height: 47px;
+}
+.textlogo{
+  width: 135px;
+  height: 37px;
+  path {
+    fill: white;
+    mix-blend-mode: multiply;
   }
 }
 
@@ -143,21 +151,33 @@ svg{
   position: absolute;
   width: 50%;
   @media (min-width: $break-md) {
-width: 50%;
+    width: 50%;
   }
 
 }
 .form-input-label-2{
 
   .input, .textarea, .select select {
-    border: 1px solid #DCDCDC;
-    border-color: #DCDCDC;
+    border: transparent;
+    border-bottom: 1px solid #333;
+    border-color: #333;
     border-width: 1px;
     padding-inline: 16px;
+
+
+
+
+
   }
 
 
+  label{
+    font-size: 14px;
+    @media (min-width: $break-md) {
+      font-size: 16px!important;
+        }
 
+  }
   
 
 }
