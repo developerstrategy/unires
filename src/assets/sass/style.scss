@@ -1640,6 +1640,18 @@ html.lenis body {
   }
 }
 
+.lineleftdown{
+  position: absolute;
+  bottom: calc(-100% - -6px);
+  left: 64px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  svg{
+    width: 100%;
+  }
+}
+
 .lineright{
   position: absolute;
   top: -71px;

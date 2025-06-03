@@ -97,11 +97,3 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Parallax effect
-const parallaxImage = document.querySelector('.parallax-img');
-
-lenis.on('scroll', ({ scroll }) => {
-  // Parallax factor (ajústalo a gusto)
-  const offset = scroll * 0.3;
-  parallaxImage.style.transform = `translateY(${offset}px)`;
-});

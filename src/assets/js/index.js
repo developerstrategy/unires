@@ -12,3 +12,12 @@ $({ Counter: 0 }).animate({
   }
 });
 
+document.addEventListener('scroll', function() {
+  if (window.scrollY > 50) {
+    document.body.classList.add('has-menu');
+  } else {
+    document.body.classList.remove('has-menu');
+  }
+});
+
+
