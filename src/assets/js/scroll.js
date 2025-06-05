@@ -1,7 +1,7 @@
-// Configuración de Ukiyo para el parallax
+// Configuración de Ukiyo para el parallax con velocidad más leve
 const els = document.querySelectorAll(".ukiyo");
 els.forEach((el) => {
-  new Ukiyo(el);
+  new Ukiyo(el, { speed: 0.5 }); // Ajuste de velocidad para un efecto más leve
 });
 
 // Inicializar Lenis

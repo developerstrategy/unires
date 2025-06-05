@@ -1,7 +1,6 @@
 .interior-content {
 
 
-
   @media (min-width: 768px) {
 
     height: 800vh;
@@ -35,6 +34,8 @@
   display: flex;
   flex-basis: 60%;
   flex-direction: column;
+  height: 100%;
+  align-items: center;
   @media (min-width: 768px) {
     flex-basis: 40%;
   }
@@ -86,7 +87,7 @@
 .boxshow2,
 .boxshow3 {
   flex: 1 0 100%;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 150px);
 }
 .lateral-scroll-title {
   position: absolute;
@@ -106,7 +107,7 @@
 
   @media (min-width: 768px) {
     position: sticky;
-    top: 16%;
+    top: 100px;
     width: 100%;
 
   }

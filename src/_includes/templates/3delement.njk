@@ -50,6 +50,7 @@
   <script type="module">
     import * as THREE from 'https://cdn.skypack.dev/three@0.132.2';
     import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js';
+    import { RGBELoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/RGBELoader.js';
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -59,9 +60,14 @@
     renderer.domElement.style.height = 'auto';
     document.getElementById('3delement').appendChild(renderer.domElement);
 
-    // Configuración de luces según la referencia proporcionada
-
-
+    // Cargar y aplicar un HDR para la iluminación
+    new RGBELoader()
+      .setPath('/assets/static/modelos/')
+      .load('field.hdr', function (texture) {
+        texture.mapping = THREE.EquirectangularReflectionMapping;
+        scene.environment = texture;
+        scene.environmentIntensity = 1.0; // Ajustar la intensidad del entorno
+      });
 
     const loader = new GLTFLoader();
     let model;
@@ -126,5 +132,6 @@
       model.rotation.x = Math.max(rotacionInicialX, Math.min(rotationX, rotacionFinalX)); // Limitar la rotación al valor mínimo y máximo
 
     });
+
   </script>
 </div>
