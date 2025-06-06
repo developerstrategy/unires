@@ -15431,8 +15431,27 @@ svg#bubble-whatsapp-icon path {
 .truquibox130,
 .truquibox140,
 .truquibox150 {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s ease-in-out;
+}
+@media (min-width: 768px) {
+  .truquibox10,
+  .truquibox20,
+  .truquibox30,
+  .truquibox40,
+  .truquibox50,
+  .truquibox60,
+  .truquibox70,
+  .truquibox80,
+  .truquibox90,
+  .truquibox100,
+  .truquibox110,
+  .truquibox120,
+  .truquibox130,
+  .truquibox140,
+  .truquibox150 {
+    opacity: 0;
+  }
 }
 
 .scrolllateral {
@@ -15459,7 +15478,7 @@ svg#bubble-whatsapp-icon path {
 }
 
 .interior-sticky {
-  width: 3000px;
+  width: 700vw;
   overflow: hidden;
   position: relative;
   z-index: 10;
@@ -17008,6 +17027,7 @@ html.lenis body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .boxparallax1 {
@@ -17173,10 +17193,9 @@ html.lenis body {
 
 .imagecentral {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20%;
-  transform: translate(-50%, 0%);
+  top: 40%;
+  left: 20%;
+  width: 60%;
   opacity: 0;
   transition: all 0.5s ease;
   z-index: 1;
@@ -17184,10 +17203,23 @@ html.lenis body {
 .imagecentral img {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .imagecentral {
+    transform: translate(-50%, 0%);
+    top: 50%;
+    left: 50%;
+    width: 20%;
+  }
+}
 
 .is-inview .imagecentral {
   opacity: 1;
-  transform: translate(-50%, -50%);
+  top: 10%;
+}
+@media (min-width: 768px) {
+  .is-inview .imagecentral {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .lineleft {

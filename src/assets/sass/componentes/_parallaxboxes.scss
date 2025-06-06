@@ -75,8 +75,11 @@
 .truquibox130,
 .truquibox140,
 .truquibox150 {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s ease-in-out;
+  @media (min-width: 768px) {
+  opacity: 0;
+  }
 }
 .scrolllateral {
   display: flex;
@@ -99,7 +102,7 @@
   padding: 20px;
 }
 .interior-sticky {
-  width: 3000px;
+  width: 700vw;
   overflow: hidden;
   position: relative;
 
