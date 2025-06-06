@@ -14587,6 +14587,21 @@ b {
   display: block;
 }
 
+.logo-simple {
+  position: fixed;
+  top: 12px;
+  left: 70px;
+  z-index: 1000;
+  mix-blend-mode: difference;
+}
+
+.logo-heart {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
 .brand-partner {
   cursor: pointer;
   -webkit-filter: saturate(0);
