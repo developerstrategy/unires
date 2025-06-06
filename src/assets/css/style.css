@@ -2292,7 +2292,7 @@ mark {
     font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
     font-weight: 500;
     font-size: 36px;
-    line-height: 1.1;
+    line-height: 1.3;
   }
   .h2 {
     font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
@@ -2334,7 +2334,7 @@ mark {
 @media (min-width: 992px) {
   .h1 {
     font-size: 72px;
-    line-height: 1.1;
+    line-height: 1.3;
   }
   .h2 {
     font-size: 48px;
@@ -3060,22 +3060,22 @@ mark {
   }
 }
 
-.h1 {
+.fluid-4-m {
   font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
   font-weight: 500;
 }
-.h1 {
+.fluid-4-m {
   font-size: 40px;
   line-height: 1;
 }
 @media (min-width: 320px) {
-  .h1 {
+  .fluid-4-m {
     font-size: calc(40px + 24 * (100vw - 320px) / 1180);
     line-height: 1;
   }
 }
 @media (min-width: 1500px) {
-  .h1 {
+  .fluid-4-m {
     font-size: 64px;
     line-height: 1;
   }
@@ -15766,18 +15766,6 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.js-color-dark {
-  background-color: #0B1A32;
-  transition: background-color 0.5s ease;
-  color: #fff;
-}
-.js-color-dark a {
-  color: #fff;
-}
-.js-color-dark .logo-simple .textlogo path {
-  fill: white;
-}
-
 p {
   font-size: inherit;
 }
@@ -17258,4 +17246,43 @@ html.lenis body {
 .textlogosvg svg blend path {
   fill: white;
   mix-blend-mode: multiply;
+}
+
+.js-color-dark {
+  background-color: #0B1A32;
+  transition: background-color 0.5s ease;
+  color: #fff;
+}
+.js-color-dark a {
+  color: #fff;
+}
+.js-color-dark .logo-simple .textlogo path {
+  fill: white;
+}
+.js-color-dark .form-input-label-2 label {
+  color: #fff !important;
+}
+.js-color-dark .form-input-label-2 input,
+.js-color-dark .form-input-label-2 textarea {
+  background-color: transparent;
+  border-radius: 0px;
+  border-bottom: 1px solid #fff !important;
+  color: #fff;
+}
+.js-color-dark .form-input-label-2 input:focus,
+.js-color-dark .form-input-label-2 textarea:focus {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.form-input-label-2 input {
+  padding-inline: 0px !important;
+  background-color: transparent !important;
+}
+.form-input-label-2 label {
+  padding-inline: 0px !important;
+}
+
+.c-green .c-accent {
+  color: #BCD86B;
 }
