@@ -12,12 +12,12 @@
   "bg_primary": "linear-gradient(120deg, #E14EF7 0%, #8E44F6 30%, #3D40F5 100%)",
   "btn_radius": "8px",
   "padding-": "16px",
-  "title": "Magna Urbis",
+  "title": "Unires",
   "lang": "es-es",
   
   "footer": "",
   "url": "https://unires.com",
-  "legal_nombre_titular": "Magna Urbis BCN S.L.",
+  "legal_nombre_titular": "Unires S.L.",
   "legal_nif_titular": "número de identificación fiscal",
   "legal_direccion_titular": "dirección del titular",
   "empresa_legal_direccion": "Avda.xxxxx",
@@ -139,7 +139,7 @@
   "telefono": "+34 93 619 12 16",
   "email": "info@unires.com",
   "footer_1": "unires.com",
-  "footer_2": "Magna Urbis - Administración de fincas y gestión patrimonial en Barcelona desde 1908.",
+  "footer_2": "Unires",
   "footer_3": "© unires.com, 2024. Todos los derechos reservados.",
   "footer_4": "Administración de fincas en Barcelona"
 }

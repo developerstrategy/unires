@@ -84,23 +84,23 @@ whytitle2_title: kk¿Por qué elegirnos?
 whytitle2_subtitle: kkCompromiso y experiencia
 whytitle2_description: kkNuestra larga trayectoria y dedicación nos convierten en la mejor opción para la administración de fincas y gestión de patrimonios en Barcelona.
 
-whytitle3_title: kkMagna Urbis, tu mejor aliado
+whytitle3_title: Unires, tu mejor aliado
 whytitle3_subtitle: kkExpertos en administración y gestión
 whytitle3_description: kkOfrecemos un servicio integral y personalizado, respaldado por más de un siglo de experiencia en el sector inmobiliario.
 
 hookfraseimagen: kkTu tranquilidad, nuestra prioridad.
 
-content_text_title1: kkAdministración de Fincas en Barcelona
-content_text_subtitle1: kkMagna Urbis, tu socio de confianza
-content_text_text1: kkCon más de 100 años de experiencia, somos líderes en la administración de fincas en Barcelona. Nuestro compromiso es ofrecer un servicio de calidad, adaptado a las necesidades de cada cliente.^^Nos especializamos en la gestión de comunidades de propietarios, garantizando la optimización y el buen funcionamiento de tus bienes inmuebles.
+content_text_title1: kkAdministración de 
+content_text_subtitle1: Unires, tu socio de confianza
+content_text_text1: kkCon más de 100 años de experiencia, somos líderes en la administración de . Nuestro compromiso es ofrecer un servicio de calidad, adaptado a las necesidades de cada cliente.^^Nos especializamos en la gestión de comunidades de propietarios, garantizando la optimización y el buen funcionamiento de tus bienes inmuebles.
 
 content_text_title2: kkGestión de Patrimonios Inmobiliarios
 content_text_subtitle2: kkOptimización y rentabilidad
 content_text_text2: kkGestionamos tu patrimonio inmobiliario para maximizar su rentabilidad. Nuestra experiencia y conocimiento del mercado nos permiten ofrecer soluciones efectivas y personalizadas.^^Desde la consultoría hasta la administración diaria, estamos aquí para que te olvides de los problemas y disfrutes de los beneficios.
 
-subtitle: kkAdministradores de fincas en Barcelona
+subtitle: kkAdministradores de 
 image: /images/index-image.jpg
-content_2: kkMagna Urbis es sinónimo de confianza, experiencia y profesionalidad en la administración de fincas y gestión de patrimonios en Barcelona.
+content_2: Unires es sinónimo de confianza, experiencia y profesionalidad en la administración de fincas y gestión de patrimonios en Barcelona.
 
 team1_title: kkNuestro Equipo
 team1_subtitle: kkProfesionales a tu servicio

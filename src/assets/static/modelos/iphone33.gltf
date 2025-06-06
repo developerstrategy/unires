@@ -557,12 +557,13 @@
         {
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
+                    0.85,
+                    0.85,
+                    0.85,
                     1.0
                 ],
-                "roughnessFactor": 0
+                "metallicFactor": 0.3,
+                "roughnessFactor": 0.8
             },
             "name": "frame",
             "doubleSided": true
@@ -570,13 +571,13 @@
         {
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.85,
+                    0.85,
+                    0.85,
                     1.0
                 ],
-                "metallicFactor": 0.0,
-                "roughnessFactor": 0
+                "metallicFactor": 0.3,
+                "roughnessFactor": 0.8
             },
             "name": "mlack",
             "doubleSided": true
@@ -584,13 +585,13 @@
         {
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.85,
+                    0.85,
+                    0.85,
                     1.0
                 ],
-                "metallicFactor": 0,
-                "roughnessFactor": 0
+                "metallicFactor": 0.3,
+                "roughnessFactor": 0.8
             },
             "name": "cam-mat",
             "doubleSided": true
@@ -598,13 +599,13 @@
         {
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.85,
+                    0.85,
+                    0.85,
                     1.0
                 ],
-                "metallicFactor": 0.0,
-                "roughnessFactor": 0
+                "metallicFactor": 0.3,
+                "roughnessFactor": 0.8
             },
             "name": "bezel",
             "doubleSided": true
@@ -612,33 +613,27 @@
         {
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.7000000476837158,
-                    0.7000000476837158,
-                    0.7000000476837158,
+                    0.85,
+                    0.85,
+                    0.85,
                     1.0
                 ],
-                "roughnessFactor": 0
+                "metallicFactor": 0.3,
+                "roughnessFactor": 0.8
             },
             "name": "ant",
             "doubleSided": true
         },
         {
             "pbrMetallicRoughness": {
-                "baseColorTexture": {
-                    "index": 0
-                },
-                "metallicFactor": 0.0,
-                "roughnessFactor": 1.0,
                 "baseColorFactor": [
-                    1.0,
-                    1.0,
-                    1.0,
+                    0.85,
+                    0.85,
+                    0.85,
                     1.0
-                ]
-            },
-            "emissiveFactor": [1.0, 1.0, 1.0],
-            "emissiveTexture": {
-                "index": 0
+                ],
+                "metallicFactor": 0.3,
+                "roughnessFactor": 0.8
             },
             "name": "disp",
             "doubleSided": true
@@ -646,13 +641,13 @@
         {
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.0,
-                    0.0,
-                    0.0,
+                    0.85,
+                    0.85,
+                    0.85,
                     0.9216867685317993
                 ],
-                "metallicFactor": 0.0,
-                "roughnessFactor": 0
+                "metallicFactor": 0.3,
+                "roughnessFactor": 0.8
             },
             "alphaMode": "BLEND",
             "name": "cam_glass%2E 001",

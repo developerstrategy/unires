@@ -1,0 +1,66 @@
+<!-- 3ddemo.njk -->
+<!-- 3delement copy.njk -->
+<!-- 3delement.njk -->
+<div class="rotation-x hidden">
+  <!-- Aquí se mostrarán las propiedades del modelo 3D y la cámara -->
+  <span id="rotation-value">Rotación X: 0</span>
+  <span id="scale-value">Escala: 1</span>
+  <span id="position-value">Posición: (0, 0, 0)</span>
+  <span id="camera-position-value">Posición de la Cámara: (0, 0, 0)</span>
+  <span id="camera-rotation-value">Rotación de la Cámara: (0, 0, 0)</span>
+</div>
+
+<div id="3delement" class="three-js-model inview p-relative inview80" style="height: 100vh;">
+  </div>
+
+<!-- Elemento 3D con Three.js -->
+<script type="module">
+  import * as THREE from 'https://cdn.skypack.dev/three@0.132.2';
+  import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js';
+  import { OrbitControls } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/controls/OrbitControls.js';
+  import { RGBELoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/RGBELoader.js';
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById('3delement').appendChild(renderer.domElement);
+
+  // Cargar e iluminar la escena con HDR
+  const rgbeLoader = new RGBELoader();
+  rgbeLoader.load('/assets/static/modelos/studio.hdr', texture => {
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+    scene.environment = texture;
+    scene.environment.intensity = 1.0; // Ajustar la intensidad del HDR
+  });
+
+  const loader = new GLTFLoader();
+  loader.load('/assets/static/modelos/caja/carcasa.gltf', gltf => {
+    const model = gltf.scene;
+    model.scale.set(10, 10, 10); // Ajustar la escala del modelo
+    const light = new THREE.PointLight(0xffffff, 1, 100);
+    light.position.set(0, 0, 50); // Ajustar la posición de la luz
+    model.add(light);
+    scene.add(model);
+  }, undefined, error => {
+    console.error('Error al cargar el modelo:', error);
+  });
+
+  camera.position.set(0, 1, 5); // Ajustar la posición de la cámara
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+</script>
