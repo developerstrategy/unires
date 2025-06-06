@@ -2289,63 +2289,45 @@ mark {
 
 @media (min-width: 1px) {
   .h1 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 32px;
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
     line-height: 1.1;
   }
   .h2 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
     font-size: 24px;
     line-height: 1.1;
   }
   .h3 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 32px;
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
     line-height: 1.1;
   }
-  .h4 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.1;
-  }
-  .h5 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.1;
-  }
-  .title-l-m {
+  .p1 {
     font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.6;
   }
-  .p1 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.6;
-  }
   .p2 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 1.4;
   }
   .p3 {
-    font-family: "font-regular", Helvetica, "Arial ", "Lucida Grande", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+    font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 1.4;
   }
   .p4 {
     font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.4;
   }
 }
@@ -2355,27 +2337,15 @@ mark {
     line-height: 1.1;
   }
   .h2 {
-    font-size: 42px;
-    line-height: 1.1;
-  }
-  .h3 {
     font-size: 48px;
     line-height: 1.1;
   }
-  .h4 {
-    font-size: 28px;
+  .h3 {
+    font-size: 42px;
     line-height: 1.1;
-  }
-  .h5 {
-    font-size: 18px;
-    line-height: 1.1;
-  }
-  .title-l-m {
-    font-size: 16px;
-    line-height: 1.6;
   }
   .p1 {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.6;
   }
   .p2 {
@@ -2383,11 +2353,11 @@ mark {
     line-height: 1.4;
   }
   .p3 {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.4;
   }
   .p4 {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.4;
   }
 }
@@ -3090,22 +3060,22 @@ mark {
   }
 }
 
-.fluid-4-m {
+.h1 {
   font-family: "font-medium", Helvetica, "Arial ", "Lucida Grande", sans-serif;
   font-weight: 500;
 }
-.fluid-4-m {
+.h1 {
   font-size: 40px;
   line-height: 1;
 }
 @media (min-width: 320px) {
-  .fluid-4-m {
+  .h1 {
     font-size: calc(40px + 24 * (100vw - 320px) / 1180);
     line-height: 1;
   }
 }
 @media (min-width: 1500px) {
-  .fluid-4-m {
+  .h1 {
     font-size: 64px;
     line-height: 1;
   }
@@ -11794,8 +11764,8 @@ strong {
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #ffffff;
-  border-radius: 50px;
-  padding-inline: 24px;
+  border-radius: 50px !important;
+  padding-inline: 50px;
 }
 
 .btn-quaternary {
@@ -11899,6 +11869,10 @@ b {
   .logo-simple {
     width: 190px;
   }
+}
+
+.btn-primary {
+  text-transform: initial;
 }
 
 .imalogo {
@@ -14168,8 +14142,8 @@ b {
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #ffffff;
-  border-radius: 50px;
-  padding-inline: 24px;
+  border-radius: 50px !important;
+  padding-inline: 50px;
 }
 
 .btn-quaternary {
@@ -14273,6 +14247,10 @@ b {
   .logo-simple {
     width: 190px;
   }
+}
+
+.btn-primary {
+  text-transform: initial;
 }
 
 .imalogo {
@@ -17280,19 +17258,4 @@ html.lenis body {
 .textlogosvg svg blend path {
   fill: white;
   mix-blend-mode: multiply;
-}
-
-.logo-simple {
-  position: fixed;
-  top: 12px;
-  left: 70px;
-  z-index: 1000;
-  mix-blend-mode: difference;
-}
-
-.logo-heart {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
 }

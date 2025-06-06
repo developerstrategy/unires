@@ -32,17 +32,15 @@ $c-bg-dark: var(--c-bg-dark);
 
 
 $minheaders:/* name:mobile,768,992,1280,line-height,font */ 
-  ( h1: ( 32px, 72px, 1.1, "regular", ), 
-  h2: ( 24px, 42px, 1.1, "regular", ), 
-  h3: ( 32px, 48px, 1.1, "regular", ), 
-  h4: ( 24px, 28px, 1.1, "regular", ), 
-  h5: ( 14px, 18px, 1.1, "regular", ), 
+  ( h1: ( 36px, 72px, 1.1, "medium", ), 
+  h2: ( 24px, 48px, 1.1, "medium", ), 
+  h3: ( 36px, 42px, 1.1, "medium", ), 
 
-  title-l-m: ( 14px, 16px, 1.6, "medium", ),
-  p1: ( 14px, 16px, 1.6, "regular", ),
-  p2: ( 14px, 18px, 1.4, "regular", ),
-  p3: ( 12px, 12px, 1.4, "regular", ),
-  p4: ( 14px, 18px, 1.4, "medium", ), );
+
+  p1: ( 14px, 24px, 1.6, "medium", ),
+  p2: ( 18px, 18px, 1.4, "medium", ),
+  p3: ( 16px, 16px, 1.4, "medium", ),
+  p4: ( 12px, 14px, 1.4, "medium", ), );
 
 
 $headersFluids: (

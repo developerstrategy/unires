@@ -10,7 +10,7 @@ seccion: servicio1
 
 hero_description: SERVICIOS
 hero_title: ADMINISTRACIÓN ^ DE FINCAS 
-hero_btn: CONTACTA CON NOSOTROS
+hero_btn: Solicita una demo
 
 home_image: /assets/static/images/servicio_1.jpg
 
