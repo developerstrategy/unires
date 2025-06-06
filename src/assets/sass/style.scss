@@ -105,7 +105,7 @@ body {
 
 
 .logo-simple{
-  svg.textlogo{
+  .textlogo{
     path{
       fill: white;
     }
@@ -1671,4 +1671,48 @@ html.lenis body {
   svg{
     width: 100%;
   }
+}
+
+.heartlogo{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.is-inview .heartlogo{
+  opacity: 1;
+}
+
+.textlogosvg{
+  padding-top: 8px;
+  margin-left: 8px;
+  mix-blend-mode: multiply;
+
+  svg{
+    mix-blend-mode: multiply;
+    blend
+
+    path {
+      fill: white;
+      mix-blend-mode: multiply;
+    }
+  
+
+  }
+
+}
+
+
+.logo-simple{
+  position: fixed;
+  top: 12px;
+  left: 70px;
+  z-index: 1000;
+  mix-blend-mode: difference;
+
+}
+.logo-heart{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
 }
