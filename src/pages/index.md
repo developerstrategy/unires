@@ -1,11 +1,11 @@
 ---
 layout: pages/_index.njk
 permalink: /
-metaTitle: --
-metaDescription: --
-metaKeywords: --
+metaTitle: holas
+metaDescription: ffff
+metaKeywords: fff
 metaRobots: index, follow
-hero_description: --
+hero_description: ffff
 hero_title: kkADMINISTRADORES ^ DE FINCAS ^ EN BARCELONA
 hero_btn: --
 
