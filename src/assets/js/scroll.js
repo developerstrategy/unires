@@ -97,3 +97,9 @@ document.addEventListener('scroll', () => {
   }
 });
 
+document.querySelectorAll('.link_a_contacta').forEach(element => {
+  element.addEventListener('click', (event) => {
+    event.preventDefault();
+    lenis.scrollTo('#contacta_4');
+  });
+});

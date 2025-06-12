@@ -31,16 +31,19 @@ $c-bg-dark: var(--c-bg-dark);
 
 
 
-$minheaders:/* name:mobile,768,992,1280,line-height,font */ 
-  ( h1: ( 36px, 72px, 1.3, "medium", ), 
-  h2: ( 24px, 48px, 1.1, "medium", ), 
-  h3: ( 36px, 42px, 1.1, "medium", ), 
+$minheaders: /* name: mobile,768,992,1280, line-height, font */
+(
+  h1: (36px, 72px, 1.1, "bold"),   // 110 %
+  h2: (24px, 48px, 1.2, "bold"),   // 150 %
+  h3: (36px, 42px, 1.2, "bold"),   // 120 %
+  h4: (18px, 24px, 1.2, "bold"),   // 120 %
 
-
-  p1: ( 14px, 24px, 1.6, "medium", ),
-  p2: ( 18px, 18px, 1.4, "medium", ),
-  p3: ( 16px, 16px, 1.4, "medium", ),
-  p4: ( 12px, 14px, 1.4, "medium", ), );
+  p1: (18px, 24px, 1.2, "medium"), // 120 %
+  p2: (18px, 18px, 1.4, "medium"), // 140 %
+  p3: (16px, 16px, 1.4, "regular"), // 140 %
+  p4: (12px, 14px, 1.2, "regular"), // 120 %
+  p5: (12px, 12px, 1.33, "medium") // 16 px ÷ 12 px
+);
 
 
 $headersFluids: (
@@ -51,7 +54,7 @@ $headersFluids: (
   6: (20px, 40px, 1.2),
   5: (30px, 48px, 1),
   4: (40px, 64px, 1),
-  3: (40px, 72px, 0.9),
+  3: (32px, 64px, 1.1),
   2: (40px, 100px, 0.9),
   
   1: (60px, 160px, 0.8)

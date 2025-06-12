@@ -67,6 +67,57 @@
   "3delement_5":"Físico",
   "3delement_5_content":"Normal",
 
+  "form_provincia": [
+    "Álava",
+    "Albacete",
+    "Alicante",
+    "Almería",
+    "Asturias",
+    "Ávila",
+    "Badajoz",
+    "Barcelona",
+    "Burgos",
+    "Cáceres",
+    "Cádiz",
+    "Cantabria",
+    "Castellón",
+    "Ciudad Real",
+    "Córdoba",
+    "Cuenca",
+    "Girona",
+    "Granada",
+    "Guadalajara",
+    "Guipúzcoa",
+    "Huelva",
+    "Huesca",
+    "Islas Baleares",
+    "Jaén",
+    "La Rioja",
+    "Las Palmas",
+    "León",
+    "Lleida",
+    "Lugo",
+    "Madrid",
+    "Málaga",
+    "Murcia",
+    "Navarra",
+    "Ourense",
+    "Palencia",
+    "Pontevedra",
+    "Salamanca",
+    "Santa Cruz de Tenerife",
+    "Segovia",
+    "Sevilla",
+    "Soria",
+    "Tarragona",
+    "Teruel",
+    "Toledo",
+    "Valencia",
+    "Valladolid",
+    "Vizcaya",
+    "Zamora",
+    "Zaragoza"
+  ],
 
 
 
@@ -78,11 +129,11 @@
 
 
 
-  "unires_2_content": "Sistema de administración ^ -aún -más -sencillo ",
-  "unires_2_subtitle": "La facilidad de uso para el personal de tu residencia también es importante. Interfaz limpia e intuitiva para gestionar la información de los residentes de forma rápida..",
+  "unires_2_content": "¿Qué hace unires ^ por tí y los tuyos?",
+  "unires_2_subtitle": "La variedad de servicios más completa.",
 
-
-
+  "lateralScroll_content": "¿Qué hace unires ^ por tí y los tuyos?",
+  "lateralScroll_subtitle": "La variedad de servicios más completa.",
 
 
   "service_subtitle": "Para que no te tengas que preocupar de nada",

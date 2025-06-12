@@ -185,7 +185,9 @@ margin-top: 8px;
     border-bottom: 1px solid #333;
     border-color: #333;
     border-width: 1px;
-    padding-inline: 16px;
+    padding-inline: 0;
+    color: #777777;
+    font-size: 16px;
 
 
 
@@ -303,8 +305,12 @@ span {
  
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1, auto);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    .unires2-box-c{
+      height: 300px;
+    }
   }
 }
 
@@ -400,6 +406,18 @@ color: #fff;
 font-weight: 900;
 font-size: 24px;
 
+
+
+}
+
+.btn--mini2{
+
+padding: 10px;
+gap: 10px;
+
+width: 210px;
+height: 48px;
+border-radius: 16px;
 
 
 }

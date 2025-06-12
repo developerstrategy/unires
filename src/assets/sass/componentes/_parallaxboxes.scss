@@ -19,25 +19,26 @@
 
 .boxshow-inner {
   position: relative;
-  display: flex;
+  display: flex
+;
   flex-direction: row;
 
-  width: 100%;
-  max-width: 900px;
   height: 100%;
   margin: 0 auto;
-  justify-content: center;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-content: space-around;
+
 }
 .boxshow-inner-img {
   display: flex;
-  flex-basis: 60%;
+
   flex-direction: column;
   height: 100%;
   align-items: center;
   @media (min-width: 768px) {
-    flex-basis: 40%;
+
   }
 }
 .lateral-scroll-title {

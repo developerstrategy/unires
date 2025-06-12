@@ -49,8 +49,20 @@
                                 <label for='apellidos'>Apellidos</label>
                             </div>
                         </div>
-
-
+                        <div class="col-xs-12 mb-16 ">
+    
+                                <div class="form-input-label-2 w-100 ">
+                                <div class="select w-100">
+                                    <select name="tipoempresa" id="tipoEmpresa" required="required" aria-required="true">
+                                        <label for='tipoEmpresa'>Provincia:</label>
+                                        <option value="" disabled selected hidden>Provincia</option>
+                                        {% for tipo in global_index.form_provincia %}
+                                        <option value="{{ tipo }}">{{ tipo | upper }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+</div>
 
                         <div class="col-xs-12 mb-16 ">
                             <div class="form-input-label-2">
@@ -67,15 +79,17 @@
                                 <label for='email'>Email</label>
                             </div>
                         </div>
-                        <div class="col-xs-12 mb-16 ">
+                        <div class="col-xs-12 mb-40 ">
                             <div class="form-input-label-2">
                                 <input id="telefono" type="text" placeholder="Teléfono" class="input" name="teléfono">
                                 <label for='email'>Teléfono</label>
                             </div>
                         </div>
+
+
                         <div class="col-xs-12 col-sm-6 mb-16 ">
       
-                            <button aria-label="enviar email" class="btn btn-primary btn--full" type="submit">
+                            <button aria-label="enviar email" class="btn btn-primary btn--mini2" type="submit">
                                 {{global_index.banner_button}}  </button>
                             </div>
                 
