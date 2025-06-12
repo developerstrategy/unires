@@ -353,6 +353,7 @@ span {
   grid-column: 2;
   grid-row: span 2;
   background-color: #ECF1E0;
+  height: 500px;
 
   @media (max-width: 768px) {
     grid-row: auto;
