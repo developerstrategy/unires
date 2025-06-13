@@ -15427,9 +15427,13 @@ svg#bubble-whatsapp-icon path {
   height: 100%;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  align-content: space-around;
+}
+@media (min-width: 768px) {
+  .boxshow-inner {
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: space-around;
+  }
 }
 
 .boxshow-inner-img {
@@ -15499,7 +15503,12 @@ svg#bubble-whatsapp-icon path {
 .scrolllateral {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .scrolllateral {
+    width: 100vw;
+  }
 }
 
 .boxshow1,
@@ -15527,7 +15536,7 @@ svg#bubble-whatsapp-icon path {
 }
 
 .interior-sticky {
-  width: 700vw;
+  width: 1000vw;
   overflow: hidden;
   position: relative;
   z-index: 10;

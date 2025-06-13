@@ -19,16 +19,21 @@
 
 .boxshow-inner {
   position: relative;
-  display: flex
-;
+  display: flex;
   flex-direction: row;
 
   height: 100%;
   margin: 0 auto;
   align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  align-content: space-around;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: space-around;
+
+
+
+  }
 
 }
 .boxshow-inner-img {
@@ -82,10 +87,14 @@
   opacity: 0;
   }
 }
+
 .scrolllateral {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 100vw;
+    }
 }
 .boxshow1,
 .boxshow2,
@@ -106,7 +115,7 @@
   padding: 20px;
 }
 .interior-sticky {
-  width: 700vw;
+  width: 1000vw;
   overflow: hidden;
   position: relative;
 
