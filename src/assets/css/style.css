@@ -15505,8 +15505,15 @@ svg#bubble-whatsapp-icon path {
 .boxshow1,
 .boxshow2,
 .boxshow3 {
-  flex: 1 0 100%;
+  flex: 1 0 250vw;
   height: calc(100vh - 150px);
+}
+@media (min-width: 768px) {
+  .boxshow1,
+  .boxshow2,
+  .boxshow3 {
+    flex: 1 0 100%;
+  }
 }
 
 .lateral-scroll-title {
