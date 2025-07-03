@@ -2,37 +2,53 @@
 
 <section class="front-section o-hidden " data-scroll-section>
 
-  <div class="container mx-auto text-center c-green  ">
-    <div class="row mb-32  inview pbr-64" >
+  <div class="container mx-auto text-center   ">
+    <div class="row  inview " >
       <div class="col-xs-12 ">
   
-        <div class="h1 mb-24 ">
-          {{ insert.splitenpalabras3(global_index.unires_2_content | safe ) }}
+        <div class="h1  animate-word c-green ">
+          {{ global_index.unires_2_content | safe  }}
 
         </div>
-        <div class="p2 ">
-          {{global_index.unires_2_subtitle | safe | mdbr }}
+        <div class="h1 mb-24  animate-word " data-delay=".5">
+          <span class="term ">{{ global_index.unires_2_content2 | safe   }}</span>
         </div>
+   
       </div>
     </div>
 
 
 
   </div>
+
+  <div class="container-3 pbr-64 text-center">
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="p2 animate-word ">
+      {{global_index.unires_2_subtitle | safe | mdbr }}
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+
   <div class="container">
 
     <section class="unires2-layout">
       <div class="unires2-box unires2-box-a1">
         <img width="296px" height="226px"  data-speed="1.2" src="/assets/static/images/caras-1.png" alt="unires_2_1" />
       </div>
-      <div class="unires2-box unires2-box-a2">
+      <div class="unires2-box unires2-box-a2 p-16">
         <img width="250px" height="auto"  data-speed="1.2" src="/assets/static/images/minilistado.gif" alt="unires_2_2" />
       </div>
       <div class="unires2-box unires2-box-b">
         <img height="100%" class="ukiyo" data-speed="1.2" src="/assets/static/images/phone-3.png" alt="unires_2_3" />
       </div>
       <div class="unires2-box unires2-box-c text-center">
-        <img width="100%"  class="ukiyo" data-speed="1.2" src="/assets/static/images/phone-4.png" alt="unires_2_4" />
+        <img width="100%" height="100%"  class="ukiyo" data-speed="1.2" src="/assets/static/images/phone-4.png" alt="unires_2_4" />
       </div>
     </section>
   </div>

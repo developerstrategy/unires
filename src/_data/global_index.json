@@ -121,7 +121,8 @@
 
 
 
-  "unires_1_content": "Unirte a UniRes ^ -es -muy -fácil",
+  "unires_1_content": "Unirte a UniRes",
+  "unires_1_content2": "es muy fácil",
 
   "unires_1_subtitle": "Te llevamos de la mano en todo el proceso",
   "unires_1_subcontent": "UniRes es una aplicación móvil que permite a los residentes de una residencia comunicarse con el personal de la misma de forma sencilla y transparente.",
@@ -131,14 +132,15 @@
 
 
 
-  "lateralScroll_content":"¿Qué hace unires ^ por tus residentes ^ y sus familias?",
+  "lateralScroll_content":"¿Qué hace unires por tus residentes y sus familias?",
   "lateralScroll_subtitle": "La variedad de servicios más completa.",
 
 
 
 
 
-  "unires_2_content": "Sistema de administración ^ --aún --más --sencillo",
+  "unires_2_content": "Sistema de administración",
+  "unires_2_content2": "aun más sencillo",
   "unires_2_subtitle": "La facilidad de uso para el personal de tu residencia también es importante. ^ Interfaz limpia e intuitiva para gestionar la información de los residentes de forma rápida.",
 
 
@@ -159,7 +161,8 @@
   "whytitle1_description2": "Nuestra misión es proporcionar un servicio integral y personalizado, orientado a maximizar el valor de los bienes inmobiliarios de nuestros clientes. A lo largo de nuestra trayectoria, hemos desarrollado un enfoque proactivo en la gestión de patrimonios y administración de fincas, garantizando la protección, el mantenimiento y el crecimiento de los activos bajo nuestra supervisión. ^^ Nuestro compromiso con la transparencia, la cercanía y la excelencia en cada uno de nuestros servicios nos ha permitido consolidar la mejor relación de confianza con nuestros clientes.",  
   "box_img_title": "Hoy en día no es suficiente con simplemente gestionar. Se requiere rigor, transparencia, cercanía y profesionalismo.",
   "box_img_description": "La administración de fincas es una tarea crucial que debe estar en manos de una empresa con experiencia y solvencia, por eso adaptamos nuestros servicios a las necesidades específicas de cada Comunidad de Propietarios.",
-  "contacta_4_title": "Contacta ^ -con -nosotros",
+  "contacta_4_title": "Contacta",
+  "contacta_4_title2": "con nosotros",
   "contacta_4_subtitle": "¿Tienes alguna pregunta?",
   "contacta_5_title": "Visítanos",
   "contacta_5_subtitle": "NUESTRA UBICACIÓN",

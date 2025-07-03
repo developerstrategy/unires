@@ -1414,23 +1414,34 @@ left: 0;
   .c-accent{
     color: #BCD86B;
   }
+  color: #BCD86B;
+}
 
+.c-red{
+  color:#FC4F4F;
 }
 
 .header-home{
 
   position: fixed;
-  top: 20px;
-  left: 40px;
-  right: 40px;
+  top: 10px;
+  left: 10px;
+  right: 10px;
   z-index: 100;
   display: flex;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.80);
-  padding: 16px 32px;
+  padding: 16px 16px;
 
   justify-content: space-between;
   border-radius: 32px;
+
+  @media (min-width: 768px) {
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    padding: 16px 32px;
+  }
 
 }
 .logo-unires{
@@ -1438,11 +1449,36 @@ left: 0;
   ;
       align-items: center;
       transform: scale(0.7);
-      left: 0;
+      left: -10px;
       position: absolute;
       gap: 8px;
+
       @media (min-width: 768px) {
         transform: scale(1);
         left: 20px;
       }
+}
+
+.list-vertical{
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	align-items: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+}
+
+.term{
+opacity: 0;
+}
+
+.animate-word span{
+
 }

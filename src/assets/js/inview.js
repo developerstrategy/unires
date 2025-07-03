@@ -124,35 +124,38 @@ document.addEventListener("DOMContentLoaded", function () {
     animateOnScrollObserver.observe(element);
   });
 
-  prepareElement('.animate-word', element => {
-    const text = element.textContent;
-    element.textContent = '';
-    const words = text.split(/(\s+)/);
-    
-    words.forEach(word => {
-      if (word.trim().length > 0) {
-        const fragments = word.split('^');
-        
-        fragments.forEach((fragment, index) => {
-          if (fragment.trim().length > 0) {
-            const wordSpan = document.createElement('span');
-            wordSpan.classList.add('term'); // Mantiene la clase 'term'
-            wordSpan.textContent = fragment;
-            wordSpan.style.opacity = 0;  // Inicializa la opacidad
-            wordSpan.style.transform = 'translateY(20px)';  // Inicializa la posición
-            element.appendChild(wordSpan);
-          }
-          if (index < fragments.length - 1) {
-            element.appendChild(document.createElement('br'));
-          }
-        });
-      } else {
-        element.appendChild(document.createTextNode(word));
-      }
-    });
+prepareElement('.animate-word', element => {
+  const text = element.textContent.replace(/\^\^/g, '\n'); // Sustituye '^^' por un salto de línea
+  element.textContent = '';
+  const words = text.split(/(\s+)/);
   
-    animateWordsObserver.observe(element);
+  words.forEach(word => {
+    if (word.trim().length > 0) {
+      const fragments = [word];
+      fragments.forEach((fragment, index) => {
+        if (fragment.trim().length > 0) {
+          const wordSpan = document.createElement('span');
+          wordSpan.classList.add('term'); // Mantiene la clase 'term'
+          
+          // Si el fragmento contiene un '<br>', lo mantiene
+          if (fragment.includes('<br>')) {
+            wordSpan.innerHTML = fragment; // Usa innerHTML para mantener el '<br>'
+          } else {
+            wordSpan.textContent = fragment;
+          }
+          
+          wordSpan.style.opacity = 0;  // Inicializa la opacidad
+          wordSpan.style.transform = 'translateY(20px)';  // Inicializa la posición
+          element.appendChild(wordSpan);
+        }
+      });
+    } else {
+      element.appendChild(document.createTextNode(word));
+    }
   });
+
+  animateWordsObserver.observe(element);
+});
 
   prepareElement('.animate-box', element => {
     element.style.opacity = 0;  // Inicializa la opacidad
