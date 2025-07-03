@@ -2,7 +2,7 @@
   "base_modules": "../../../node_modules/boilerplate-modules/src/_includes/",
   "search_console": "VJczrBeO31v4cRQZR4yNkB6NO117Ll6bUrrOMFnD3pk",
   "c_gray": "#727272",
-  "c_primary": "#000000",
+  "c_primary": "#2b2a28",
   "c_secondary": "#000000",
   "c_accent": "#ff0000",
   "bg_dark": "#1D1E23",
@@ -50,12 +50,12 @@
 
   "hero_btn": "Solicita una demo",
   "introbenefits2_subtitle": "Gestión y confianza",
-  "introbenefits2_content": "UniRes nace con la misión de democratizar la comunicación entre las Residencias, los residentes y sus seres queridos. Todo en una misma aplicación de una forma sencilla y sobretodo transparente.",
+  "introbenefits2_content": "UniRes nace con la misión de democratizar la comunicación entre las Residencias, los residentes y sus seres queridos. ",
 
 
 
   "3delement_0":"Sueño",
-  "3delement_0_content":"Muy bien",
+  "3delement_0_content":"Muy bueno",
   "3delement_1":"Desayuno",
   "3delement_1_content":"Frutas variadas, café, huevos y cereales",
   "3delement_2":"Mente",
@@ -123,47 +123,27 @@
 
   "unires_1_content": "Unirte a UniRes ^ -es -muy -fácil",
 
-  "unires_1_subtitle": "La variedad de servicios más completa.",
+  "unires_1_subtitle": "Te llevamos de la mano en todo el proceso",
   "unires_1_subcontent": "UniRes es una aplicación móvil que permite a los residentes de una residencia comunicarse con el personal de la misma de forma sencilla y transparente.",
   "unires_1_subcontent2": "UniRes es una aplicación móvil que permite a los residentes de una residencia comunicarse con el personal de la misma de forma sencilla y transparente.",
 
 
 
-  "unires_2_content": "¿Qué hace unires ^ por tí y los tuyos?",
-  "unires_2_subtitle": "La variedad de servicios más completa.",
 
-  "lateralScroll_content": "¿Qué hace unires ^ por tí y los tuyos?",
+
+  "lateralScroll_content":"¿Qué hace unires ^ por tus residentes ^ y sus familias?",
   "lateralScroll_subtitle": "La variedad de servicios más completa.",
 
 
-  "service_subtitle": "Para que no te tengas que preocupar de nada",
-  "service_title": "SOLUCIONES PARA PROPIETARIOS",
-  "services": [
-    {
-      "service_name": "Administración de fincas",
-      "service_content": "Administramos inmuebles residenciales y Comunidades de Propietarios en Barcelona.",
-      "service_img": "servicio_1"
-    },
-    {
-      "service_name": "Patrimonios inmobiliarios",
-      "service_content": "Adaptamos la gestión de tus bienes  a tus necesidades, asegurando la optimización entre seguridad  y rentabilidad que mejor se adapte a tu perfil.",
-      "service_img": "servicio_2"
-    },
-    {
-      "service_name": "Gestión comercial",
-      "service_content": "Nos encargamos de alquilar o vender tus propiedades, y te ayudamos a encontrar aquellas que se ajusten a tus requisitos patrimoniales.",
-      "service_img": "servicio_3"
-    }
 
-    ,
-    {
-      "service_name": "Asesoria jurídica",
-      "service_content": "Te asesoramos respecto a contratos inmobiliarios, sucesiones y fiscalidad inmobiliaria.",
-      "service_img": "servicio_4"
-    }
-  ],
 
-  "textAppear_content": "UniRes nace con la misión de democratizar la comunicación entre las Residencias, los residentes y sus seres queridos. Todo en una misma aplicación de una forma sencilla y sobretodo transparente.",
+
+  "unires_2_content": "Sistema de administración ^ --aún --más --sencillo",
+  "unires_2_subtitle": "La facilidad de uso para el personal de tu residencia también es importante. ^ Interfaz limpia e intuitiva para gestionar la información de los residentes de forma rápida.",
+
+
+
+  "textAppear_content": "UniRes nace con la misión de democratizar la comunicación entre las Residencias, los residentes y sus seres queridos.",
   "introbenefits_title": "¿Cómo me uno a UniRes?",
   "introbenefits_subtitle": "Ofrecer UniRes a tus clientes es muy fácil",
   "introbenefits_1title": "Profesionalidad",
