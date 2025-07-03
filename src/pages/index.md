@@ -2,10 +2,10 @@
 layout: pages/_index.njk
 permalink: /
 metaTitle: Unires
-metaDescription: ffff
+metaDescription: "Unires es una aplicación innovadora diseñada para mejorar la gestión y el cuidado en residencias de ancianos, ofreciendo herramientas avanzadas para la administración eficiente y el bienestar de los residentes."
 metaKeywords: "app para residencias de ancianos, gestión de residencias, software para cuidado de ancianos, aplicación para administración de residencias, tecnología para cuidado de mayores, plataforma para residencias geriátricas, solución digital para residencias de ancianos, herramientas para gestión de residencias, sistema para administración de residencias de ancianos, app para cuidado de personas mayores"
 metaRobots: index, follow
-hero_description: ffff
+hero_description: "Unires proporciona una plataforma integral para la gestión eficiente y el cuidado de los residentes en centros geriátricos, asegurando un entorno seguro y conectado para todos."
 hero_title: Ofrece una herramienta de reporting sobre tus residentes de forma sencilla.
 
 hero_btn: --
