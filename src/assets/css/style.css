@@ -11930,6 +11930,7 @@ b {
 .form-input-label-2 > input,
 .form-input-label-2 > label,
 .form-input-label-2 > textarea,
+.form-input-label-2 > select,
 .error-zone > input,
 .error-zone > label {
   padding-left: 16px;
@@ -14313,6 +14314,7 @@ b {
 .form-input-label-2 > input,
 .form-input-label-2 > label,
 .form-input-label-2 > textarea,
+.form-input-label-2 > select,
 .error-zone > input,
 .error-zone > label {
   padding-left: 16px;
