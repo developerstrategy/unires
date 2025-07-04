@@ -24,42 +24,7 @@ lenis.on('scroll', () => {
   }
 });
 
-// Función para cambiar el color del body cuando una div con clase .color-dark tiene al menos un 30% visible
-function updateBodyColor() {
-  const darkSections = document.querySelectorAll('.color-dark');
-  const windowHeight = window.innerHeight;
-  let colorChanged = false;
 
-  if (darkSections.length === 0) {
-    console.log('No se encontraron elementos con la clase color-dark');
-    return;
-  }
-
-  darkSections.forEach((section) => {
-    if (colorChanged) return;
-
-    const rect = section.getBoundingClientRect();
-    const visibleHeight = Math.min(windowHeight, rect.bottom) - Math.max(0, rect.top);
-    const totalHeight = section.offsetHeight;
-    const visibilityRatio = visibleHeight / totalHeight;
-
-    if (visibilityRatio >= 0.3) {
-      if (!document.body.classList.contains('js-color-dark')) {
-        document.body.classList.add('js-color-dark');
-        console.log('Añadida clase js-color-dark - Ratio:', visibilityRatio);
-      }
-      colorChanged = true;
-    } else {
-      if (document.body.classList.contains('js-color-dark')) {
-        document.body.classList.remove('js-color-dark');
-        console.log('Removida clase js-color-dark - Ratio:', visibilityRatio);
-      }
-    }
-  });
-}
-
-// Asegúrate de llamar a la función updateBodyColor en el evento de scroll
-document.addEventListener('scroll', updateBodyColor);
 
 function updateOpacity() {
   const sections = document.querySelectorAll('.fade-opacity');

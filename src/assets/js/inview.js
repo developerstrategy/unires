@@ -24,15 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const inViewCallback = entries => handleIntersect(entries, inViewObserver, element => element.classList.add('is-inview'));
 
-  const inView80Callback = entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-inview80');
-      } else {
-        entry.target.classList.remove('is-inview80');
-      }
-    });
-  };
+  const inView80Callback = entries => handleIntersect(entries, inView80Observer, element => element.classList.add('is-inview80'));
+
+
 
   const animateOnScrollCallback = entries => handleIntersect(entries, animateOnScrollObserver, target => {
     const delay = parseFloat(target.dataset.delay || 0);
@@ -108,8 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
+
   prepareElement('.inview80', element => {
     inView80Observer.observe(element);
+    if (element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom >= 0) {
+      element.classList.add('is-inview80');
+      inView80Observer.unobserve(element);
+    }
   });
 
   prepareElement('.animate-appear', element => {
