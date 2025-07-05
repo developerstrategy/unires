@@ -100,7 +100,7 @@
 .boxshow2,
 .boxshow3 {
   flex: 1 0 250vw;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 220px);
   @media (min-width: 768px) {
     flex: 1 0 100%;
     }
@@ -115,7 +115,7 @@
   padding: 20px;
 }
 .interior-sticky {
-  width: 1000vw;
+  width: 950vw;
   overflow: hidden;
   position: relative;
 

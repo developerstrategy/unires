@@ -9465,6 +9465,9 @@ div.card9-wrap .rat-content:hover .card9-add {
   .ptr-64 {
     padding-top: 64px;
   }
+  .ptr-100 {
+    padding-top: 50px;
+  }
   .ptr-120 {
     padding-top: 64px;
   }
@@ -9475,6 +9478,9 @@ div.card9-wrap .rat-content:hover .card9-add {
 @media (min-width: 768px) {
   .ptr-64 {
     padding-top: 64px;
+  }
+  .ptr-100 {
+    padding-top: 50px;
   }
   .ptr-120 {
     padding-top: 64px;
@@ -9487,6 +9493,9 @@ div.card9-wrap .rat-content:hover .card9-add {
   .ptr-64 {
     padding-top: 64px;
   }
+  .ptr-100 {
+    padding-top: 100px;
+  }
   .ptr-120 {
     padding-top: 120px;
   }
@@ -9497,6 +9506,9 @@ div.card9-wrap .rat-content:hover .card9-add {
 @media (min-width: 1280px) {
   .ptr-64 {
     padding-top: 64px;
+  }
+  .ptr-100 {
+    padding-top: 100px;
   }
   .ptr-120 {
     padding-top: 120px;
@@ -9529,6 +9541,9 @@ div.card9-wrap .rat-content:hover .card9-add {
   .pbr-64 {
     padding-bottom: 64px;
   }
+  .pbr-100 {
+    padding-bottom: 50px;
+  }
   .pbr-120 {
     padding-bottom: 64px;
   }
@@ -9540,6 +9555,9 @@ div.card9-wrap .rat-content:hover .card9-add {
   .pbr-64 {
     padding-bottom: 64px;
   }
+  .pbr-100 {
+    padding-bottom: 50px;
+  }
   .pbr-120 {
     padding-bottom: 64px;
   }
@@ -9550,6 +9568,9 @@ div.card9-wrap .rat-content:hover .card9-add {
 @media (min-width: 992px) {
   .pbr-64 {
     padding-bottom: 64px;
+  }
+  .pbr-100 {
+    padding-bottom: 100px;
   }
   .pbr-120 {
     padding-bottom: 120px;
@@ -9561,6 +9582,9 @@ div.card9-wrap .rat-content:hover .card9-add {
 @media (min-width: 1280px) {
   .pbr-64 {
     padding-bottom: 64px;
+  }
+  .pbr-100 {
+    padding-bottom: 100px;
   }
   .pbr-120 {
     padding-bottom: 120px;
@@ -11668,6 +11692,9 @@ strong {
   .ptr-64 {
     padding-top: 64px;
   }
+  .ptr-100 {
+    padding-top: 50px;
+  }
   .ptr-120 {
     padding-top: 64px;
   }
@@ -11678,6 +11705,9 @@ strong {
 @media (min-width: 768px) {
   .ptr-64 {
     padding-top: 64px;
+  }
+  .ptr-100 {
+    padding-top: 50px;
   }
   .ptr-120 {
     padding-top: 64px;
@@ -11690,6 +11720,9 @@ strong {
   .ptr-64 {
     padding-top: 64px;
   }
+  .ptr-100 {
+    padding-top: 100px;
+  }
   .ptr-120 {
     padding-top: 120px;
   }
@@ -11700,6 +11733,9 @@ strong {
 @media (min-width: 1280px) {
   .ptr-64 {
     padding-top: 64px;
+  }
+  .ptr-100 {
+    padding-top: 100px;
   }
   .ptr-120 {
     padding-top: 120px;
@@ -11712,6 +11748,9 @@ strong {
   .pbr-64 {
     padding-bottom: 64px;
   }
+  .pbr-100 {
+    padding-bottom: 50px;
+  }
   .pbr-120 {
     padding-bottom: 64px;
   }
@@ -11722,6 +11761,9 @@ strong {
 @media (min-width: 768px) {
   .pbr-64 {
     padding-bottom: 64px;
+  }
+  .pbr-100 {
+    padding-bottom: 50px;
   }
   .pbr-120 {
     padding-bottom: 64px;
@@ -11734,6 +11776,9 @@ strong {
   .pbr-64 {
     padding-bottom: 64px;
   }
+  .pbr-100 {
+    padding-bottom: 100px;
+  }
   .pbr-120 {
     padding-bottom: 120px;
   }
@@ -11744,6 +11789,9 @@ strong {
 @media (min-width: 1280px) {
   .pbr-64 {
     padding-bottom: 64px;
+  }
+  .pbr-100 {
+    padding-bottom: 100px;
   }
   .pbr-120 {
     padding-bottom: 120px;
@@ -11827,6 +11875,10 @@ b {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 200 !important;
+}
+
+.sbold {
+  font-weight: 600;
 }
 
 .btn.btn--icon {
@@ -11914,16 +11966,15 @@ b {
   border-bottom: 1px solid #333;
   border-color: #333;
   border-width: 1px;
+}
+.form-input-label-2 .input, .form-input-label-2 .textarea, .form-input-label-2 .select select, .form-input-label-2 label {
   padding-inline: 0;
   color: #777777;
-  font-size: 12px;
-}
-.form-input-label-2 label {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (min-width: 992px) {
-  .form-input-label-2 label {
-    font-size: 16px !important;
+  .form-input-label-2 .input, .form-input-label-2 .textarea, .form-input-label-2 .select select, .form-input-label-2 label {
+    font-size: 14px;
   }
 }
 
@@ -11935,7 +11986,6 @@ b {
 .error-zone > label {
   padding-left: 16px;
   font-weight: normal;
-  font-size: 12px;
   text-transform: uppercase;
 }
 
@@ -12076,6 +12126,8 @@ b {
 }
 
 .gradient-verde {
+  width: 200px;
+  margin-left: -10px;
   background: linear-gradient(90deg, #E9DC74 0%, #92CD7C 100%);
 }
 
@@ -14213,6 +14265,10 @@ b {
   font-weight: 200 !important;
 }
 
+.sbold {
+  font-weight: 600;
+}
+
 .btn.btn--icon {
   width: 300px;
   height: 80px;
@@ -14298,16 +14354,15 @@ b {
   border-bottom: 1px solid #333;
   border-color: #333;
   border-width: 1px;
+}
+.form-input-label-2 .input, .form-input-label-2 .textarea, .form-input-label-2 .select select, .form-input-label-2 label {
   padding-inline: 0;
   color: #777777;
-  font-size: 12px;
-}
-.form-input-label-2 label {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (min-width: 992px) {
-  .form-input-label-2 label {
-    font-size: 16px !important;
+  .form-input-label-2 .input, .form-input-label-2 .textarea, .form-input-label-2 .select select, .form-input-label-2 label {
+    font-size: 14px;
   }
 }
 
@@ -14319,7 +14374,6 @@ b {
 .error-zone > label {
   padding-left: 16px;
   font-weight: normal;
-  font-size: 12px;
   text-transform: uppercase;
 }
 
@@ -14460,6 +14514,8 @@ b {
 }
 
 .gradient-verde {
+  width: 200px;
+  margin-left: -10px;
   background: linear-gradient(90deg, #E9DC74 0%, #92CD7C 100%);
 }
 
@@ -15497,7 +15553,7 @@ svg#bubble-whatsapp-icon path {
 .boxshow2,
 .boxshow3 {
   flex: 1 0 250vw;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 220px);
 }
 @media (min-width: 768px) {
   .boxshow1,
@@ -15518,7 +15574,7 @@ svg#bubble-whatsapp-icon path {
 }
 
 .interior-sticky {
-  width: 1000vw;
+  width: 950vw;
   overflow: hidden;
   position: relative;
   z-index: 10;
@@ -17051,7 +17107,12 @@ html.lenis body {
 #parallaxboxes {
   position: relative;
   z-index: 10;
-  height: 100vh;
+  height: 80vh;
+}
+@media (min-width: 768px) {
+  #parallaxboxes {
+    height: 100vh;
+  }
 }
 
 .interior-parallax {
@@ -17076,7 +17137,7 @@ html.lenis body {
 }
 @media (min-width: 768px) {
   .boxparallax1 {
-    width: 32%;
+    width: 35%;
     height: 20vh;
   }
 }
@@ -17088,7 +17149,7 @@ html.lenis body {
 }
 @media (min-width: 768px) {
   .boxparallax2 {
-    width: 32%;
+    width: 35%;
     height: 30vh;
   }
 }
@@ -17098,12 +17159,13 @@ html.lenis body {
   height: 20vh;
   z-index: 5;
   align-self: flex-start;
-  margin-left: 40%;
+  margin-left: 20%;
 }
 @media (min-width: 768px) {
   .boxparallax3 {
-    width: 32%;
+    width: 30%;
     height: 30vh;
+    margin-left: 35%;
   }
 }
 

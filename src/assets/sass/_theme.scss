@@ -78,6 +78,9 @@ b {
   -webkit-text-fill-color: transparent;
   font-weight: 200!important;
 }
+.sbold{
+  font-weight: 600;
+}
 .btn.btn--icon {
   width: 300px;
   height: 80px;
@@ -172,26 +175,27 @@ b {
 
 }
 .form-input-label-2{
-
-  .input, .textarea, .select select {
+  .input, .textarea, .select select{
     border: transparent;
     border-bottom: 1px solid #333;
     border-color: #333;
     border-width: 1px;
-    padding-inline: 0;
-    color: #777777;
-    font-size: 12px;
-
   }
 
+  .input, .textarea, .select select, label {
 
-  label{
-    font-size: 14px;
+ 
+
+    padding-inline: 0;
+    color: #777777;
+    font-size: 16px;
     @media (min-width: $break-md) {
-      font-size: 16px!important;
+      font-size: 14px;
         }
 
   }
+
+
   
 
 }
@@ -206,7 +210,7 @@ b {
 
   padding-left: 16px;
   font-weight: normal;
-  font-size: 12px;
+
   text-transform: uppercase;
 }
 
@@ -363,6 +367,8 @@ span {
 
 
 .gradient-verde{
+  width: 200px;
+  margin-left: -10px;
   background: linear-gradient(90deg, #E9DC74 0%, #92CD7C 100%);
 }
 

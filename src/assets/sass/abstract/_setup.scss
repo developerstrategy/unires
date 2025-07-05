@@ -116,13 +116,16 @@ $c-black: $c-primary;
 
 $padding-top: (
    ptr-64: ( 64px, 64px, 64px, 64px ),
+   ptr-100: ( 50px, 50px, 100px, 100px ),
    ptr-120: ( 64px, 64px, 120px, 120px ),
+   
    ptr-200: ( 100px, 100px, 200px, 200px )
 ) ;
 
 
 $padding-bottom: (
    pbr-64: ( 64px, 64px, 64px, 64px ),
+   pbr-100: ( 50px, 50px, 100px, 100px ),
    pbr-120: ( 64px, 64px, 120px, 120px ),
    pbr-200: ( 100px, 100px, 200px, 200px )
 ) ;
