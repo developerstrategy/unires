@@ -16,17 +16,17 @@
   "lang": "es-es",
   
   "footer": "",
-  "url": "https://unires.com",
+  "url": "https://uniresapp.com",
   "legal_nombre_titular": "Unires S.L.",
   "legal_nif_titular": "número de identificación fiscal",
   "legal_direccion_titular": "dirección del titular",
   "empresa_legal_direccion": "Avda.xxxxx",
   "empresa_legal": "UniRes S.L.",
   "empresa_corto": "nombre comercial",
-  "website": "www.unires.com",
+  "website": "www.uniresapp.com",
   "whatsapp": "",
   "direction_link": "enlace de ubicación",
-  "empresa_copyright": " © 2025 UniRes",
+  "empresa_copyright": " © 2025 UniResApp",
   "author": "Manuel Ruiz",
   "authorweb": "design-systems.es",
   "imageDir": "/assets/static/images/",
@@ -140,7 +140,7 @@
 
 
   "unires_2_content": "Sistema de administración",
-  "unires_2_content2": "aun más sencillo",
+  "unires_2_content2": "aún más sencillo",
   "unires_2_subtitle": "La facilidad de uso para el personal de tu residencia también es importante. ^ Interfaz limpia e intuitiva para gestionar la información de los residentes de forma rápida.",
 
 
@@ -171,9 +171,9 @@
   
   "direction": "Avda. Diagonal, 416, 1-1, 08037, Barcelona (Casa de les Punxes)",
   "telefono": "+34 93 619 12 16",
-  "email": "info@unires.com",
-  "footer_1": "unires.com",
-  "footer_2": "Unires",
-  "footer_3": "© unires.com, 2024. Todos los derechos reservados.",
+  "email": "info@uniresapp.com",
+  "footer_1": "uniresapp.com",
+  "footer_2": "UniresApp",
+  "footer_3": "© uniresapp.com, 2025. Todos los derechos reservados.",
   "footer_4": "Administración de fincas en Barcelona"
 }

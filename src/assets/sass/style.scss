@@ -1154,9 +1154,9 @@ html.lenis body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+
   @media (min-width: 768px) {
-    overflow: visible;
+
   }
 }
 .boxparallax1 {
