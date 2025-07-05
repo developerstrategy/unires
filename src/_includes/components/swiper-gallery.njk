@@ -30,7 +30,7 @@
     {% for galeria in global.galeria.split(',') %} 
      <li class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 
-          <a class="slide-link" title="click to zoom-in" href="{{ global.imageDir }}galeria/zoom/{{ galeria }}.jpg" itemprop="contentUrl" data-size="1200x1200">
+          <a class="slide-link" title="click to zoom-in" href="{{ global.imageDir }}galeria/zoom/{{ galeria }}.jpg" itemprop="contentUrl" data-size="1200x1200" aria-label="Ampliar imagen de galería">
                  <div class="rat-1-1">
                 <div class="rat-content">
             <img src="{{ global.imageDir }}galeria/{{ galeria }}.jpg" itemprop="thumbnail" alt="{{ galeria }}" />
