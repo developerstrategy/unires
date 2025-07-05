@@ -35,13 +35,13 @@
 
         </div>
     </a>
- <button class="link_a_contacta btn btn-sextary">Solicita una demo</button>
+ <button class="link_a_contacta btn btn-sextary" aria-label="Solicita una demo gratuita">Solicita una demo</button>
 
 
     <div id="menu-fixed">
         <div class="menu-fixed-inner ">
-            <button id="menu-toggle" class="btn">
-                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button id="menu-toggle" class="btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-mobile-wrap">
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect y="0.599976" width="22" height="2.2" rx="1.1" fill="#1E1E1E" />
                     <rect y="7.19995" width="22" height="2.2" rx="1.1" fill="#1E1E1E" />
                     <rect y="13.7999" width="22" height="2.2" rx="1.1" fill="#1E1E1E" />
@@ -65,9 +65,9 @@
     </div>
 </header>
 <div class="menu-mobile-wrap">
-    <button class="btn link_cierre">
+    <button class="btn link_cierre" aria-label="Cerrar menú de navegación">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
-            transform="rotate(45)">
+            transform="rotate(45)" aria-hidden="true">
             <rect x="9.9" width="1" height="22" fill="#1E1E1E" />
             <rect y="9.9" width="22" height="1" fill="#1E1E1E" />
         </svg>
@@ -83,7 +83,7 @@
         {% endif %}
         {% endfor %}
         <li>
-            <button class="link_a_contacta btn btn-primary">CONTACTA</button>
+            <button class="link_a_contacta btn btn-primary" aria-label="Ir a la sección de contacto">CONTACTA</button>
         </li>
     </ul>
 </div>
