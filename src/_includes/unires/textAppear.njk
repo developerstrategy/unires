@@ -43,6 +43,11 @@
     if (!targets.length) return;
 
     targets.forEach(el => {
+      // Prevenir que GSAP añada aria-label incorrectamente
+      if (el.hasAttribute('aria-label')) {
+        el.removeAttribute('aria-label');
+      }
+      
       // 1. Separar palabras
       const split = new SplitText(el, { type: 'words' });
 
@@ -64,6 +69,11 @@
         const visible = window.innerHeight - rect.top;
         const progress = Math.min(1, Math.max(0, (visible - window.innerHeight * 0.4) / sectionHeight));
         tl.progress(progress);
+        
+        // Asegurar que no se añada aria-label incorrectamente
+        if (el.hasAttribute('aria-label')) {
+          el.removeAttribute('aria-label');
+        }
       };
 
       // 4. Sincronizar con Lenis o scroll nativo
