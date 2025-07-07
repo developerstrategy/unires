@@ -17465,22 +17465,26 @@ html.lenis body {
   }
 }
 
-.list-vertical {
+ul.list-vertical {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
 }
+ul.list-vertical li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+ul.list-vertical li a {
+  text-decoration: underline;
+}
 @media (min-width: 768px) {
-  .list-vertical {
+  ul.list-vertical {
     display: flex;
     flex-direction: row;
     gap: 16px;
     align-items: flex-start;
     justify-content: flex-end;
-  }
-  .list-vertical li {
-    padding-bottom: 4px;
   }
 }
 

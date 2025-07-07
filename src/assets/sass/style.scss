@@ -1464,12 +1464,20 @@ left: 0;
       }
 }
 
-.list-vertical{
+ul.list-vertical{
 
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 	align-items: center;
+
+  li{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    a{
+ text-decoration: underline;
+    }
+  }
 
   @media (min-width: 768px) {
     display: flex;
@@ -1478,9 +1486,7 @@ left: 0;
     align-items: flex-start;
     justify-content: flex-end;
 
-    li{
-      padding-bottom: 4px;
-    }
+
   }
 
 }
