@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.querySelector('.transition-overlay');
 
   barba.init({
+    // Hook global para reinicializar observadores
+    afterEnter() {
+      if (window.initInView) {
+        setTimeout(() => {
+          window.initInView();
+        }, 100);
+      }
+    },
     transitions: [
       {
         name: 'overlay-transition',
@@ -39,6 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
         afterEnter() {
           // Restablecer el scroll al inicio
           window.scrollTo(0, 0);
+          
+          // Reinicializar los observadores de InView después de la transición
+          if (window.initInView) {
+            setTimeout(() => {
+              window.initInView();
+            }, 100); // Pequeño delay para asegurar que el DOM esté listo
+          }
         }
       }
     ]

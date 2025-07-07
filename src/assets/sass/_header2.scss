@@ -132,12 +132,25 @@ $header-desktop: 200px;
   /* CTA */
   /* Auto layout */
   border: none;
-  font-size: 15px;
+  font-size: 12px;
 
-padding-inline: 20px;
+padding-inline: 10px;
+padding-block: 10px;
 
   white-space: nowrap;
   background: #FC4F4F;
   border-radius: 16px;
   font-weight: 900;
+  @media (min-width: $break-md) {
+    padding-inline: 20px;
+    padding-block: 12px;
+    font-size: 15px;
+  }
+}
+
+.has-light .c-dark-grey a{
+color: #8e8e8e;
+
+
+
 }

@@ -1,4 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Variables globales para los observadores
+let inViewObserver, inView80Observer, animateOnScrollObserver, animateWordsObserver, 
+    animateBoxObserver, animateBox2Observer, animateListObserver, animateLettersObserver;
+
+// Función para crear observadores
+const createObservers = () => {
   const createObserver = (callback, options) => new IntersectionObserver(callback, options);
 
   const handleIntersect = (entries, observer, animationFn) => {
@@ -24,9 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const inViewCallback = entries => handleIntersect(entries, inViewObserver, element => element.classList.add('is-inview'));
 
-  const inView80Callback = entries => handleIntersect(entries, inView80Observer, element => element.classList.add('is-inview80'));
-
-
+  const inView80Callback = entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-inview80');
+      } else {
+        entry.target.classList.remove('is-inview80');
+      }
+    });
+  };
 
   const animateOnScrollCallback = entries => handleIntersect(entries, animateOnScrollObserver, target => {
     const delay = parseFloat(target.dataset.delay || 0);
@@ -85,15 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const animateOptions = { threshold: 0.1 };
   const inView80Options = { threshold: 0.8 };
 
-  const inViewObserver = createObserver(inViewCallback, options);
-  const inView80Observer = createObserver(inView80Callback, inView80Options);
-  const animateOnScrollObserver = createObserver(animateOnScrollCallback, animateOptions);
-  const animateWordsObserver = createObserver(animateWordsCallback, animateOptions);
-  const animateBoxObserver = createObserver(animateBoxCallback, animateOptions);
-  const animateBox2Observer = createObserver(animateBox2Callback, animateOptions);
-  const animateListObserver = createObserver(animateListCallback, animateOptions);
-  const animateLettersObserver = createObserver(animateLettersCallback, animateOptions);
+  // Crear observadores
+  inViewObserver = createObserver(inViewCallback, options);
+  inView80Observer = createObserver(inView80Callback, inView80Options);
+  animateOnScrollObserver = createObserver(animateOnScrollCallback, animateOptions);
+  animateWordsObserver = createObserver(animateWordsCallback, animateOptions);
+  animateBoxObserver = createObserver(animateBoxCallback, animateOptions);
+  animateBox2Observer = createObserver(animateBox2Callback, animateOptions);
+  animateListObserver = createObserver(animateListCallback, animateOptions);
+  animateLettersObserver = createObserver(animateLettersCallback, animateOptions);
 
+  // Preparar elementos .inview
   prepareElement('.inview', element => {
     inViewObserver.observe(element);
     if (element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom >= 0) {
@@ -102,16 +115,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
-
+  // Preparar elementos .inview80
   prepareElement('.inview80', element => {
     inView80Observer.observe(element);
     if (element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom >= 0) {
       element.classList.add('is-inview80');
-      inView80Observer.unobserve(element);
     }
   });
 
+  // Preparar elementos .animate-appear
   prepareElement('.animate-appear', element => {
     const wrapper = document.createElement('span');
     wrapper.classList.add('inner-content');
@@ -124,45 +136,48 @@ document.addEventListener("DOMContentLoaded", function () {
     animateOnScrollObserver.observe(element);
   });
 
-prepareElement('.animate-word', element => {
-  const text = element.textContent.replace(/\^\^/g, '\n'); // Sustituye '^^' por un salto de línea
-  element.textContent = '';
-  const words = text.split(/(\s+)/);
-  
-  words.forEach(word => {
-    if (word.trim().length > 0) {
-      const fragments = [word];
-      fragments.forEach((fragment, index) => {
-        if (fragment.trim().length > 0) {
-          const wordSpan = document.createElement('span');
-          wordSpan.classList.add('term'); // Mantiene la clase 'term'
-          
-          // Si el fragmento contiene un '<br>', lo mantiene
-          if (fragment.includes('<br>')) {
-            wordSpan.innerHTML = fragment; // Usa innerHTML para mantener el '<br>'
-          } else {
-            wordSpan.textContent = fragment;
+  // Preparar elementos .animate-word
+  prepareElement('.animate-word', element => {
+    const text = element.textContent.replace(/\^\^/g, '\n'); // Sustituye '^^' por un salto de línea
+    element.textContent = '';
+    const words = text.split(/(\s+)/);
+    
+    words.forEach(word => {
+      if (word.trim().length > 0) {
+        const fragments = [word];
+        fragments.forEach((fragment, index) => {
+          if (fragment.trim().length > 0) {
+            const wordSpan = document.createElement('span');
+            wordSpan.classList.add('term'); // Mantiene la clase 'term'
+            
+            // Si el fragmento contiene un '<br>', lo mantiene
+            if (fragment.includes('<br>')) {
+              wordSpan.innerHTML = fragment; // Usa innerHTML para mantener el '<br>'
+            } else {
+              wordSpan.textContent = fragment;
+            }
+            
+            wordSpan.style.opacity = 0;  // Inicializa la opacidad
+            wordSpan.style.transform = 'translateY(20px)';  // Inicializa la posición
+            element.appendChild(wordSpan);
           }
-          
-          wordSpan.style.opacity = 0;  // Inicializa la opacidad
-          wordSpan.style.transform = 'translateY(20px)';  // Inicializa la posición
-          element.appendChild(wordSpan);
-        }
-      });
-    } else {
-      element.appendChild(document.createTextNode(word));
-    }
+        });
+      } else {
+        element.appendChild(document.createTextNode(word));
+      }
+    });
+
+    animateWordsObserver.observe(element);
   });
 
-  animateWordsObserver.observe(element);
-});
-
+  // Preparar elementos .animate-box
   prepareElement('.animate-box', element => {
     element.style.opacity = 0;  // Inicializa la opacidad
     element.style.transform = 'translateY(20px)';  // Inicializa la posición
     animateBoxObserver.observe(element);
   });
 
+  // Preparar elementos .animate-box2
   prepareElement('.animate-box2', element => {
     let wrapper = element.querySelector('.inner-wrapper');
     if (!wrapper) {
@@ -174,13 +189,14 @@ prepareElement('.animate-word', element => {
       element.appendChild(wrapper);
     }
 
-    element.style.overflow = 'hidden';  // Inicializa la opacidad
+    element.style.overflow = 'hidden';  // Inicializa el overflow
 
     const delay = parseFloat(element.dataset.delay || 0);
     console.log(`Preparar animate-box2 con retraso: ${delay}`, wrapper); // Consola de depuración
     animateBox2Observer.observe(element);
   });
 
+  // Preparar elementos .animate-list
   prepareElement('.animate-list', element => {
     const items = element.querySelectorAll('li');
     items.forEach(item => {
@@ -190,6 +206,7 @@ prepareElement('.animate-word', element => {
     animateListObserver.observe(element);
   });
 
+  // Preparar elementos .animate-letters
   prepareElement('.animate-letters', element => {
     const text = element.textContent;
     element.textContent = '';
@@ -204,6 +221,33 @@ prepareElement('.animate-word', element => {
     });
     animateLettersObserver.observe(element);
   });
+};
+
+// Función para limpiar observadores (importante para Barba.js)
+const cleanupObservers = () => {
+  if (inViewObserver) inViewObserver.disconnect();
+  if (inView80Observer) inView80Observer.disconnect();
+  if (animateOnScrollObserver) animateOnScrollObserver.disconnect();
+  if (animateWordsObserver) animateWordsObserver.disconnect();
+  if (animateBoxObserver) animateBoxObserver.disconnect();
+  if (animateBox2Observer) animateBox2Observer.disconnect();
+  if (animateListObserver) animateListObserver.disconnect();
+  if (animateLettersObserver) animateLettersObserver.disconnect();
+};
+
+// Función de inicialización que se puede llamar desde Barba.js
+const initInView = () => {
+  console.log('Inicializando InView...');
+  cleanupObservers();
+  createObservers();
+};
+
+// Inicialización inicial
+document.addEventListener("DOMContentLoaded", function () {
+  initInView();
 });
+
+// Hacer la función disponible globalmente para Barba.js
+window.initInView = initInView;
 
 let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
