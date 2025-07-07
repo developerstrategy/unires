@@ -223,31 +223,9 @@ const createObservers = () => {
   });
 };
 
-// Función para limpiar observadores (importante para Barba.js)
-const cleanupObservers = () => {
-  if (inViewObserver) inViewObserver.disconnect();
-  if (inView80Observer) inView80Observer.disconnect();
-  if (animateOnScrollObserver) animateOnScrollObserver.disconnect();
-  if (animateWordsObserver) animateWordsObserver.disconnect();
-  if (animateBoxObserver) animateBoxObserver.disconnect();
-  if (animateBox2Observer) animateBox2Observer.disconnect();
-  if (animateListObserver) animateListObserver.disconnect();
-  if (animateLettersObserver) animateLettersObserver.disconnect();
-};
-
-// Función de inicialización que se puede llamar desde Barba.js
-const initInView = () => {
-  console.log('Inicializando InView...');
-  cleanupObservers();
-  createObservers();
-};
-
-// Inicialización inicial
+// Inicialización cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", function () {
-  initInView();
+  createObservers();
 });
-
-// Hacer la función disponible globalmente para Barba.js
-window.initInView = initInView;
 
 let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);

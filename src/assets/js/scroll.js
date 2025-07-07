@@ -7,11 +7,12 @@ els.forEach((el) => {
 // Inicializar Lenis
 let lenis = new Lenis({
   smooth: true,
-  lerp: 0.07, // Suavidad del scroll
-  duration: 1.2, // Suavidad del scroll
-  pinned: true,
+  lerp: 0.1, // Suavidad del scroll
+  duration: 1, // Suavidad del scroll
   easing: (t) => t, // Curva de desplazamiento (lineal)
 });
+
+console.log("Lenis inicializado");
 
 // Agregar la clase "scrolled" al body según la posición del scroll
 lenis.on('scroll', () => {
@@ -23,8 +24,6 @@ lenis.on('scroll', () => {
     document.body.classList.remove("scrolled");
   }
 });
-
-
 
 function updateOpacity() {
   const sections = document.querySelectorAll('.fade-opacity');
@@ -47,19 +46,9 @@ function updateOpacity() {
 function raf(time) {
   lenis.raf(time);
   updateOpacity(); // Actualiza la opacidad en cada frame
-  updateBodyColor(); // Actualiza el color del body en cada frame
+  requestAnimationFrame(raf);
 }
 
-let isScrolling = false;
-
-document.addEventListener('scroll', () => {
-  if (!isScrolling) {
-    isScrolling = true;
-    requestAnimationFrame((time) => {
-      raf(time);
-      isScrolling = false;
-    });
-  }
-});
-
+// Inicializar el loop de animación
+requestAnimationFrame(raf);
 

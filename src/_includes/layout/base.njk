@@ -53,7 +53,7 @@
   </script>
   {% endif %}
 </head>
-<body data-barba="wrapper" class="contain {{ colorHeader }} {% if page.url == '/' %}home{% endif %}">
+<body  class=" {{ colorHeader }} {% if page.url == '/' %}home{% endif %}">
   <!-- Google Tag Manager (noscript) -->
   {% if global_index.tag_manager %}
   <noscript>
@@ -63,25 +63,19 @@
 
 
   <header>
-      <!-- Header fuera del contenedor de Barba.js 
-<div class="current-section">
 
-</div>
-
--->
     
     {% include 'components/header.njk' %}
   </header>
 
-  <div id="barba-wrapper">
-    <div class="barba-container" data-barba="container" data-barba-namespace="home">
+  <div >
+
    
  
       {{ content | safe }}
 
-    </div>  </div>
+    </div> 
 
-  <div class="transition-overlay"></div>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -91,12 +85,12 @@
   <script src="https://cdn.jsdelivr.net/npm/ukiyojs@4.0.3/dist/ukiyo.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/dist/lenis.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
   <script type="module" src="/assets/js/appear-text.js"></script>
 
   <script type="module" src="/assets/js/index.js"></script>
   <script type="module" src="/assets/js/scroll.js"></script>
   <script type="module" src="/assets/js/inview.js"></script>
-  <script type="module" src="/assets/js/barba.js"></script>
+
 
 
