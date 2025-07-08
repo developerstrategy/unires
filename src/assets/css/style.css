@@ -15475,7 +15475,7 @@ svg#bubble-whatsapp-icon path {
 @media (max-width: 768px) {
   .interior-content {
     position: relative;
-    z-index: 10;
+    z-index: 5;
     overflow: auto;
   }
 }
@@ -15598,7 +15598,6 @@ svg#bubble-whatsapp-icon path {
   left: 0;
   width: 33%;
   height: 100%;
-  z-index: 10;
   padding: 20px;
 }
 
@@ -17539,6 +17538,18 @@ ul.list-vertical li a {
   margin: 0;
 }
 
+.arrow-center {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .arrow-border {
   display: flex;
   align-items: center;
@@ -17548,4 +17559,8 @@ ul.list-vertical li a {
   padding: 8px;
   width: 100px;
   height: 50px;
+}
+
+svg {
+  fill: none;
 }
