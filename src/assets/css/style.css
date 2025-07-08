@@ -15503,6 +15503,12 @@ svg#bubble-whatsapp-icon path {
   align-items: center;
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .boxshow-inner-img {
+    height: 100%;
+  }
+}
+
 .lateral-scroll-title {
   position: absolute;
   top: 0;
@@ -17473,7 +17479,7 @@ html.lenis body {
   .logo-unires {
     transform: scale(1);
     left: 20px;
-    top: 15px;
+    top: 17px;
   }
 }
 
