@@ -17565,3 +17565,12 @@ ul.list-vertical li a {
 svg {
   fill: none;
 }
+
+.badget-app {
+  height: 35px;
+}
+@media (min-width: 768px) {
+  .badget-app {
+    height: 65px;
+  }
+}

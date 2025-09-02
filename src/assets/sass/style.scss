@@ -1571,3 +1571,10 @@ transform: rotate(90deg);
 svg{
   fill: none;
 }
+
+.badget-app{
+  height: 35px;
+
+  @media (min-width: 768px) {
+    height: 65px;  }
+}
