@@ -9,7 +9,7 @@ author: man
 realizada:  ✅
 date: 2024-02-02
 tags: ["legal", "aviso"]
-image: /assets/static/images/3.jpg
+image: ""
 imageAlt: aviso legal
 description: 
 

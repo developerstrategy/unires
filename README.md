@@ -1,183 +1,319 @@
-# The boilerplate
+# UniRes App - Sitio Web
 
-Bienvenido a The boilerplate, la base ideal para crear sitios web dinámicos y eficientes. Este proyecto, desarrollado con la colaboración de Manuel, Dani y José, integra las poderosas funcionalidades de Nunjucks y Eleventy para ofrecer una experiencia de desarrollo web ágil y flexible.
+Sitio web corporativo de UniRes, una aplicación innovadora para la gestión de residencias de ancianos. Desarrollado con Eleventy, Nunjucks, SASS y tecnologías modernas de frontend.
 
-## Características
+## 📋 Tabla de Contenidos
 
-- **Integración de Nunjucks**: Plantillas poderosas y fáciles de usar para una personalización sin esfuerzo.
-- **Basado en Eleventy**: Rápido, sencillo y extensible, Eleventy te ayuda a construir proyectos de manera eficiente.
-- **Estructura Modular**: Diseñado para ser adaptable y escalable según las necesidades de tu proyecto.
-- **Documentación Completa**: Guías y ejemplos para facilitar tu proceso de desarrollo.
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación](#instalación)
+- [Configuración](#configuración)
+- [Scripts Disponibles](#scripts-disponibles)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Desarrollo](#desarrollo)
+- [Build para Producción](#build-para-producción)
+- [Despliegue](#despliegue)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
+## 🔧 Requisitos Previos
 
-## Estructura del Proyecto
+Antes de comenzar, asegúrate de tener instalado:
 
+- **Node.js** (versión 16 o superior)
+- **npm** (viene incluido con Node.js) o **yarn**
 
+Puedes verificar las versiones instaladas ejecutando:
 
-Para organizar la estructura de carpetas y archivos de tu proyecto de Eleventy con Nunjucks, puedes seguir el siguiente árbol de directorios. Este esquema refleja la organización de los archivos y carpetas que has listado, proporcionando una visión clara de la estructura del proyecto:
+```bash
+node --version
+npm --version
+```
 
+## 🚀 Instalación
 
+1. **Clona el repositorio** (o descarga el proyecto):
 
-   ```bash
-boilerplate/
-   ├── .eleventy.js # Configuración de Eleventy para personalizar el comportamiento del generador de sitios.
-   ├── .eslintrc.js # Configuración de ESLint para mantener el estilo y calidad del código JavaScript.
-   ├── .gitignore # Especifica archivos intencionalmente no rastreados para ignorar por Git.
-   ├── .htmlnanorc # Configuración para htmlnano, utilizado para minificar archivos HTML.
-   ├── ejemplos.txt # Archivo de texto que contiene ejemplos o documentación relevante.
-   ├── img-exporter.js # Script para exportar o procesar imágenes dentro del proyecto.
-   ├── LICENSE # El archivo de licencia que especifica los términos bajo los cuales se distribuye el proyecto.
-   ├── nunjucks.config.js # Configuración de Nunjucks para definir filtros y variables globales para las plantillas.
-   ├── package-lock.json # Autogenerado para cualquier operación donde npm modifica el árbol de node_modules o package.json.
-   ├── package.json # Define propiedades y dependencias del proyecto, scripts y metadatos relevantes.
-   ├── README.md # Documentación inicial del proyecto, proporcionando una visión general y guía de uso.
-   └── src/ # Directorio que contiene el código fuente del proyecto.
-      ├── _data/ # Datos globales que pueden ser utilizados en las plantillas.
-      ├── _includes/ # Componentes, layouts y fragmentos reutilizables de Nunjucks.
-      ├── assets/ # Recursos estáticos como CSS, JavaScript, imágenes.
-      ├── pages/ # Las páginas del sitio, cada una correspondiente a una ruta URL.
-      ├── google5f3d2fed92020926.html # Verificación de propiedad de Google Site.
-      ├── humans.njk # Plantilla Nunjucks para generar el archivo humans.txt, promoviendo el reconocimiento humano.
-      ├── robots.njk # Plantilla Nunjucks para generar el archivo robots.txt, para controlar el acceso de los motores de búsqueda.
-      ├── site.webmanifest.njk # Plantilla para generar el manifiesto del sitio web, utilizado por los navegadores.
-      └── sitemap.njk # Plantilla para generar el sitemap del sitio, importante para SEO.
-   ```
+```bash
+git clone <url-del-repositorio>
+cd unires
+```
 
-A continuación, se detallan los archivos y directorios principales del proyecto:
+2. **Instala las dependencias**:
 
-## /src
-Este directorio contiene los archivos fuente del proyecto. Aquí es donde se almacenan las plantillas, los archivos de estilo y los scripts que serán procesados por Eleventy para generar el sitio estático. La configuración de Nunjucks permite utilizar un sistema de plantillas potente y flexible para este propósito.
+```bash
+npm install
+```
 
-## .eleventy.js
-Este archivo de configuración es esencial para definir cómo Eleventy procesará tu proyecto. Aquí puedes especificar opciones como directorios de entrada y salida, plugins a utilizar, transformaciones de datos y cualquier otra configuración específica de Eleventy que necesites para personalizar el comportamiento del generador de sitios estáticos.
+Esto instalará todas las dependencias necesarias definidas en `package.json`.
 
-## .eslintrc.js
-Este archivo contiene la configuración de ESLint, una herramienta de linting para JavaScript. Ayuda a mantener el código limpio y consistente siguiendo un conjunto de reglas predefinidas o personalizadas. Es especialmente útil en proyectos colaborativos para asegurar que todos los desarrolladores sigan las mismas prácticas de codificación.
+## ⚙️ Configuración
 
-## .gitignore
-Este archivo le dice a Git qué archivos o directorios ignorar en el control de versiones. Esto es útil para excluir archivos de configuración local, dependencias instaladas o cualquier otro archivo que no deba ser compartido con el repositorio remoto.
+### Variables de Configuración
 
-## .htmlnanorc
-Este archivo de configuración pertenece a htmlnano, un minificador de HTML. Aquí puedes definir las opciones para optimizar y reducir el tamaño de tus archivos HTML finales, lo cual es crucial para mejorar los tiempos de carga de la página.
+El archivo principal de configuración se encuentra en `src/_data/global_index.json`. Aquí puedes configurar:
 
-## ejemplos.txt
-Un archivo de texto que probablemente contiene ejemplos de código o notas relacionadas con el proyecto. Este tipo de archivo es útil para documentar snippets de código comunes o patrones de diseño específicos del proyecto.
+- Información de la empresa
+- URLs y dominios
+- Colores del tema
+- Configuración de SEO
+- Redes sociales
+- Y más...
 
-img-exporter.js
-Estos scripts de JavaScript están diseñados para automatizar la exportación de imágenes. Pueden ser utilizados para procesar imágenes antes de su inclusión en el sitio, optimizándolas para la web. La presencia de una copia sugiere versiones de prueba o diferentes configuraciones de exportación. (no usado en este proyecto)
+### Configuración de Eleventy
 
-## LICENSE
-Este archivo contiene la licencia bajo la cual se distribuye el proyecto. Es crucial para informar a los usuarios y contribuyentes sobre cómo pueden usar y distribuir el proyecto y su código fuente.
+La configuración de Eleventy se encuentra en `.eleventy.js`. Aquí se definen:
 
-## nunjucks.config.js
-Configuración específica para Nunjucks, este archivo permite personalizar el comportamiento del motor de plantillas, como definir filtros personalizados, globales y configurar directorios para plantillas.
+- Directorios de entrada y salida
+- Plugins utilizados
+- Filtros personalizados
+- Shortcodes
+- Configuración de imágenes
 
+## 📜 Scripts Disponibles
 
+### Desarrollo
 
-## Empezando
-
-Para comenzar a usar The boilerplate, sigue estos sencillos pasos:
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/developerstrategy/boilerplate.git
-
-2. Instala las dependencias:
-  ```bash
-   npm install
-
-3. Inicia el servidor de desarrollo:
-
-  ```bash
-Copy code
+```bash
+# Inicia el servidor de desarrollo con hot-reload
 npm start
+```
 
+Este comando:
+- Compila SASS a CSS
+- Inicia el servidor de Eleventy con hot-reload
+- Observa cambios en archivos y recarga automáticamente
 
+### Build
 
-## Contribuir
-Nos encantaría que contribuyas a The boilerplate. Antes de enviar tu contribución, por favor lee nuestras directrices de contribución.
+```bash
+# Genera la versión de producción
+npm run build
+```
 
-Autores
-Manuel - Ux old school
-Dani - Criptovrox
-José - Paintballpro
-Licencia
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE.md para detalles.
+Este comando:
+- Compila SASS minificado
+- Genera el sitio estático en la carpeta `public/`
 
-Agradecimientos
-Agradecemos a todos quienes han contribuido con su tiempo, código y feedback.
-Inspiración, créditos, etc.
+### Scripts Individuales
 
+```bash
+# Solo compilar SASS (modo watch)
+npm run watch:sass
 
-Herramientas
+# Solo compilar Eleventy (modo watch)
+npm run watch:eleventy
 
-{% call insert.splitenpalabras(herodesc , '',10,10  ) %} {% endcall %}
+# Solo compilar SASS para producción
+npm run build:sass
 
-{% call insert.splitenpalabras2("frase 1", "frase 2" ) %} {% endcall %}
+# Solo compilar Eleventy para producción
+npm run build:eleventy
 
+# Modo debug de Eleventy
+npm run debug
+```
 
-Espaciado
-   {% br3 %}
-       introducir imagenes con su tamaño
+## 📁 Estructura del Proyecto
 
+```
+unires/
+├── .eleventy.js              # Configuración de Eleventy
+├── package.json              # Dependencias y scripts
+├── nunjucks.config.js        # Configuración de Nunjucks
+├── img-exporter.js           # Script para exportar imágenes
+├── src/                      # Código fuente
+│   ├── _data/                # Datos globales (JSON)
+│   │   └── global_index.json # Configuración principal
+│   ├── _includes/            # Componentes y layouts
+│   │   ├── components/       # Componentes reutilizables
+│   │   ├── layout/           # Layouts base
+│   │   ├── pages/            # Templates de páginas
+│   │   ├── templates/        # Templates adicionales
+│   │   ├── unires/           # Componentes específicos de UniRes
+│   │   ├── legal/            # Templates legales
+│   │   └── macros/           # Macros de Nunjucks
+│   ├── assets/               # Recursos estáticos
+│   │   ├── css/              # CSS compilado
+│   │   ├── sass/             # Archivos SASS fuente
+│   │   ├── js/               # JavaScript
+│   │   ├── fonts/            # Fuentes tipográficas
+│   │   └── static/           # Imágenes y otros assets
+│   ├── pages/                # Páginas del sitio (Markdown)
+│   ├── blog/                 # Configuración del blog
+│   ├── es/                   # Contenido en español
+│   │   └── legal/            # Páginas legales
+│   └── templates/            # Templates especiales
+├── public/                   # Sitio generado (no versionar)
+└── cms/                      # Configuración de Decap CMS
+```
 
-Se edita en eleventy
-  {% image  "foto.jpg","alt","title","class" %}
+## 💻 Desarrollo
 
+### Iniciar el Servidor de Desarrollo
 
- ## Rollover cursor
- data-text="Ver más" class="swiper-wrapper  hoverable_link"
+```bash
+npm start
+```
 
+El sitio estará disponible en `http://localhost:8080` (o el puerto que Eleventy asigne).
 
+### Flujo de Trabajo
 
-En hexadecimal
+1. **Editar contenido**: Modifica archivos en `src/pages/` (Markdown) o `src/_includes/` (Nunjucks)
+2. **Editar estilos**: Modifica archivos en `src/assets/sass/`
+3. **Editar scripts**: Modifica archivos en `src/assets/js/`
+4. Los cambios se reflejan automáticamente en el navegador
 
-Color primario de botones. 
-Colores de backgrounds que se usarán. 
-color de acento de texto (bold), si lo tiene. 
+### Estructura de Páginas
 
-logos de empresas si hemos trabajado. 
-En formato png. todas en mismo tamaño contenedor. 
+Las páginas se definen en `src/pages/` usando Markdown con front matter:
 
-tipografía y grosores usados. 
-regular, bold, light.
+```markdown
+---
+layout: pages/_index.njk
+permalink: /
+metaTitle: Título de la página
+metaDescription: Descripción para SEO
+---
 
-iconos usados en svg 
+Contenido de la página...
+```
 
-tamaños tipograficos usados. separados en ...
+### Componentes
 
-h1,h2,h3 etc....
+Los componentes están en `src/_includes/` y se pueden incluir en las páginas:
 
-Si hay fuentes flexibles, que crecen , hay que decir
+```nunjucks
+{% include 'unires/introCta_2.njk' %}
+{% include 'unires/parallaxboxes.njk' %}
+```
 
-fluid_1   va desde 12px hasta 200px p.ej
+## 🏗️ Build para Producción
 
+### Generar el Sitio Estático
 
+```bash
+npm run build
+```
 
- # Filtro Nunjucks: mdbr
- 
- Este filtro personalizado de Nunjucks procesa texto con formato markdown simplificado.
- 
- ## Funcionalidad:
- 
- 1. Convierte texto entre guiones (-) en texto en negrita usando <span>.
- 2. Reemplaza *** y ** por saltos de línea <br>.
- 3. Convierte secuencias de ^ en múltiples saltos de línea.
- 
- ## Uso:
- 
- ```nunjucks
- {{ "Texto -en negrita- con ***saltos de línea** y ^^^múltiples saltos" | mdbr }}
- ```
- 
- ## Resultado:
- 
- ```html
- Texto <span class="bold">en negrita</span> con <br><br><br>múltiples saltos
- ```
- 
- @param {string} value - El texto a procesar
- @returns {string} El texto procesado con HTML
+Esto generará:
+- CSS minificado en `src/assets/css/style.css`
+- Sitio HTML estático en `public/`
 
+### Verificar el Build
 
-Teniendo una aplicacion en nunjuctk lenis, eleventy, gsap. 
+Puedes servir el directorio `public/` con cualquier servidor estático:
+
+```bash
+# Con Python
+cd public
+python -m http.server 8000
+
+# Con Node.js (http-server)
+npx http-server public -p 8000
+
+# Con PHP
+cd public
+php -S localhost:8000
+```
+
+## 🚢 Despliegue
+
+### Opciones de Despliegue
+
+El sitio generado en `public/` es completamente estático y puede desplegarse en:
+
+- **Netlify**: Conecta tu repositorio y usa el build command `npm run build`
+- **Vercel**: Similar a Netlify
+- **GitHub Pages**: Sube el contenido de `public/` a la rama `gh-pages`
+- **Servidor tradicional**: Sube el contenido de `public/` vía FTP/SFTP
+
+### Configuración para Netlify
+
+Crea un archivo `netlify.toml` en la raíz:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
+### Variables de Entorno
+
+Si necesitas variables de entorno, configúralas en tu plataforma de despliegue y accede a ellas en `.eleventy.js` usando `process.env`.
+
+## 🛠️ Tecnologías Utilizadas
+
+### Core
+- **[Eleventy](https://www.11ty.dev/)** (v2.0.1) - Generador de sitios estáticos
+- **[Nunjucks](https://mozilla.github.io/nunjucks/)** (v3.2.4) - Motor de plantillas
+- **[SASS](https://sass-lang.com/)** (v1.77.2) - Preprocesador CSS
+
+### JavaScript
+- **[GSAP](https://greensock.com/gsap/)** (v3.11.0) - Animaciones
+- **[Lenis](https://github.com/studio-freight/lenis)** - Smooth scroll
+- **jQuery** (v3.6.0) - Utilidades DOM
+
+### Plugins de Eleventy
+- `@11ty/eleventy-img` - Optimización de imágenes
+- `eleventy-plugin-embed-everything` - Embeds de contenido
+- `eleventy-plugin-toc` - Tabla de contenidos
+- `markdown-it` - Procesador de Markdown
+
+### CSS
+- **Holy Grail CSS** - Sistema de grid
+- Fuentes personalizadas (Neutrif, Silka)
+
+## 📝 Filtros y Shortcodes Personalizados
+
+### Filtro `mdbr`
+
+Convierte texto con formato markdown simplificado:
+
+```nunjucks
+{{ "Texto -en negrita- con ***saltos**" | mdbr | safe }}
+```
+
+### Shortcode `image`
+
+Inserta imágenes con dimensiones automáticas:
+
+```nunjucks
+{% image "foto.jpg", "alt text", "title", "class-name" %}
+```
+
+### Shortcodes de Espaciado
+
+```nunjucks
+{% br %}   <!-- Un salto de línea -->
+{% br2 %}  <!-- Dos saltos de línea -->
+{% br3 %}  <!-- Tres saltos de línea -->
+```
+
+## 🤝 Contribución
+
+1. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+2. Realiza tus cambios
+3. Commit tus cambios (`git commit -m 'Añade nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia ISC. Ver el archivo `LICENSE` para más detalles.
+
+## 📞 Soporte
+
+Para preguntas o soporte, contacta a:
+- **Email**: tecnologia@uniresapp.com
+- **Web**: [www.uniresapp.com](https://www.uniresapp.com)
+
+---
+
+**UniRes** - Tecnología al servicio del cuidado de mayores.

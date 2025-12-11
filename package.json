@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate_v1",
+  "name": "unires-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sitio web corporativo de UniRes App",
   "main": "index.js",
   "scripts": {
     "watch:eleventy": "eleventy --serve --incremental",
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Allchorne3/11ty-nunjucks.git"
+    "url": "https://github.com/uniresapp/website.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["unires", "eleventy", "nunjucks", "static-site"],
+  "author": "UniRes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Allchorne3/11ty-nunjucks/issues"
+    "url": "https://github.com/uniresapp/website/issues"
   },
-  "homepage": "https://github.com/Allchorne3/11ty-nunjucks#readme",
+  "homepage": "https://www.uniresapp.com",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^4.0.2",

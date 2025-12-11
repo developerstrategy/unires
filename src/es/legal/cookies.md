@@ -10,7 +10,7 @@ permalink: /legal/cookies/
 author: man
 date: 2024-02-02
 tags: ["legal", "cookies"]
-image: /assets/static/images/4.jpg
+image: ""
 imageAlt: cookies
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
 
