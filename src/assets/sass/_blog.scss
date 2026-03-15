@@ -89,27 +89,24 @@
   h1 {
     margin-top: 64px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 24px, 50px, 1);
     width: 100%;
-    line-height: 1;
     @include font-regular();
+    @include fluid-text($min_width, $break-lg, 24px, 50px, 1);
   }
 
   h2 {
     margin-top: 64px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 24px, 40px, 1);
     width: 100%;
-    line-height: 1;
     @include font-regular();
+    @include fluid-text($min_width, $break-lg, 24px, 40px, 1);
   }
 
   h3 {
     margin-top: 64px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 20px, 35px, 1);
-    line-height: 1;
     @include font-regular();
+    @include fluid-text($min_width, $break-lg, 20px, 35px, 1);
   }
 
   h4 {
